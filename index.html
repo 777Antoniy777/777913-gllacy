@@ -6,11 +6,15 @@
   </head>
   <body>
     
-    <--Шапка Глейси-->
+    <!--Шапка Глейси-->
     <header class="main-header">
-    <--Логотип-->
+    
+    <!--Логотип-->
+    <a class="main-header-logo">
     <img src="img/index-logo.svg" width="250" height="250" alt="Логотип Глейси">
-     <--Меню навигации по сайту-->
+    </a>
+    
+     <!--Меню навигации по сайту-->
       <nav class="main-navigation">
           <ul class="site-navigation">
               <li><a href="catalog.html">Каталог</a></li>
@@ -18,21 +22,134 @@
               <li><a href="company.html">О Компании</a></li>
           </ul>
       </nav>
-      <--Меню пользователя-->
-      <nav class="sesond-navigation">
+      
+      <!--Меню пользователя-->
           <ul class="user-navigation">
-              <li class="search">Поиск</li> <--Вместо поиск подставить иконку спрайта?-->
+              <li class="search">Поиск</li> <!--Вместо поиск подставить иконку спрайта?-->
               <li class="login">Вход</li>
               <li class="bag">Пусто</li>
           </ul>
-      </nav>
-      <--Контактная информация-->
+      
+      <!--Контактная информация-->
       <p>
           с 10 до 20, ежедневно<br>
           <span>8 812 450-25-25</span>
       </p>
     </header>
    
+   
+   <!--Основное содержание-->
+   <main class="container">
+     
+      <!--Скрытый h1-->
+      <h1 class="visually-hidden">Магазин Глейси</h1>
+      
+      <!--Карусель-->
+      <figure>
+          <ul class="main-picture">
+             <li class="slide-icecream"><img src="first.slide" width="400" height="400" alt="2 вкусных рожка мороженого"><h1>Крем-брюле и пломбир с малиновым джемом</h1>
+             </li>
+             <li class="slide-icecream"><img src="second.slide" width="400" height="400" alt="2 вкусных рожка мороженого"><h1>Где другие подписи слайдов?</h1>
+             </li>
+              <li class="slide-icecream"><img src="third.slide" width="400" height="400" alt="2 вкусных рожка мороженого"><h1>Где другие подписи слайдов?</h1></li>
+        </ul>
+             <span class="button button-receive">Давайте оба!</span>
+     </figure>   
+     
+     <!--2 колонки-->
+     <h2 class="visually-hidden">Акции</h2>
+     <section class="first-column">
+         <h2>Малинка даром!</h2>
+         <p>При покупке 2 кг любого фруктового мороженого, добавим<br> в ваш заказ банку малинового варенья бесплатно</p>
+         <span class="button button-jam">Хочу варенье!</span>
+     </section>
+     <section class="second-column">
+         <h2>Шоколадки даром!</h2>
+         <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку<br> вкуснейшей шоколадной присыпки совершенно бесплатно</p>
+         <span class="button button-chocolate">Хочу шоколадки!</span>
+     </section>
+     
+     <!--Хиты-->
+     <h2 class="visually-hidden">Хиты</h2>
+     <table class="offers">
+         <tr class="offers-top">
+             <td>Хит</td>
+             <td>Хит</td>
+             <td>Хит</td>
+             <td>Хит</td>
+         </tr>
+         <tr class="offers-icecream">
+             <td><img src="icecream" width="100" height="100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
+             <td><img src="icecream" width="100" height="100" alt="Сливочное-кофейное с кусочками шоколада"></td>
+             <td><img src="icecream" width="100" height="100" alt="Сливочное-клубничное с присыпкой из белого шоколада"></td>
+             <td><img src="icecream" width="100" height="100" alt="Сливочное крем-брюле с карамельной подливкой"></td>
+         </tr>
+         <tr class="offers-price"><!--Как сделать символ рубля?-->
+             <td>310 Р / <span>кг</span></td>
+             <td>380 Р / <span>кг</span></td>
+             <td>355 Р / <span>кг</span></td>
+             <td>415 Р / <span>кг</span></td>
+         </tr>
+         <tr class="offers-description">
+             <td><h5>Сливочное с апельсиновым<br> джемом и цитрусовой стружкой</h5></td>
+             <td><h5>Сливочное-кофейное с кусочками<br> шоколада</h5></td>
+             <td><h5>Сливочное-клубничное с<br> присыпкой из белого шоколада</h5></td>
+             <td><h5>Сливочное крем-брюле с<br> карамельной подливкой</h5></td>
+         </tr>
+          <tr class="offers-fastlook">
+             <td><span class="button button-look">Быстрый просмотр</span></td>
+             <td><span class="button button-look">Быстрый просмотр</span></td>
+             <td><span class="button button-look">Быстрый просмотр</span></td>
+             <td><span class="button button-look">Быстрый просмотр</span></td>
+         </tr>
+     </table>
+     
+     <!--Особенности-->
+     <h3 class="visually-hidden">Особенности</h3>
+     <section class="features">
+         <h3>Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженого собственного<br> производства на развес</h3>
+         <table>
+             <tr>
+                 <td class="icon first-icon"></td>
+                 <td><p>Все наше мороженое изготавливается на собственном<br> производстве, с использованием современного оборудования<br> и проверенных временем технологий.</p></td>
+                 <td class="icon second-icon"></td>
+                 <td><p>Закупка ингредиентов производится только у проверенных<br> фермерских хозяйств и компаний, с которыми нас связывает<br> долговременное сотрудничество.</p></td>
+             </tr>
+             <tr>
+                 <td class="icon third-icon"></td>
+                 <td><p>Для приготовления мороженого используются настоящие<br> сливки и молоко высочайшего качества. Все дополнительные<br> ингредиенты и добавки произведены из натурального,<br> экологически чистого сырья.</p></td>
+                 <td class="icon forth-icon"></td>
+                 <td><p>Доставка нашего мороженого до заказчиков осуществляется<br> в специальном термопаке, который не дает мороженому<br> растаять в пути и позволяет сохранить превосходный вкус.</p></td>
+             </tr>
+         </table>
+     </section>
+     
+     <!--Новости-->
+     <h4 class="visually-hidden">10 способов сервировки фруктовых щербетов к столу</h4>
+     <article class="news">
+         <p>Новое в нашем блоге</p>
+         <a href="https://topice2017.ru/index.php/blog/20-fruit-cherbet">10 способов сервировки фруктовых щербетов к столу</a>
+     </article>
+     
+     <!--Форма отправки-->
+     <h4 class="visually-hidden">Форма отправки</h4>
+     <section class="form-dispatch">
+         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+         <!--Будущий input-->
+         <span class="button button-dispatch">Отправить</span>
+     </section>
+     
+     <!--Карта js-->
+     <h5 class="visually-hidden">Карта</h5>
+     <section>
+         <p>Адрес главного офиса и офлайн-магазина
+         <span>ул. Большая конюшенная 19/8, Санкт-Петербург</span></p>
+         <p>Для заказов по телефону:
+         <span>8-812 450-25-25</span>
+         (с 10 до 20 ежедневно)</p>
+         <span class="button button-answer">Форма обратной связи</span>
+     </section>
+   </main>
 
   </body>
 </html>
