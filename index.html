@@ -25,9 +25,19 @@
       
       <!--Меню пользователя-->
           <ul class="user-navigation">
-              <li class="search">Поиск</li> <!--Вместо поиск подставить иконку спрайта?-->
-              <li class="login">Вход</li>
-              <li class="bag">Пусто</li>
+              <li class="icon icon-header-search">Поиск</li> <!--Вместо поиск подставить иконку спрайта?-->
+              <li class="login">
+                  <ul>
+                      <li class="icon icon-header-login">Иконка входа</li>
+                      <li><span>Вход</span></li>
+                  </ul>
+              </li>
+              <li class="bag">
+                  <ul>
+                      <li class="icon icon-header-bag">Иконка корзины</li>
+                      <li><span>Пусто</span></li>
+                  </ul>
+              </li>
           </ul>
       
       <!--Контактная информация-->
@@ -40,18 +50,27 @@
    
    <!--Основное содержание-->
    <main class="container">
-     
-      <!--Скрытый h1-->
-      <h1 class="visually-hidden">Магазин Глейси</h1>
       
       <!--Карусель-->
+      <h1 class="visually-hidden">Магазин Глейси</h1>
       <figure>
-          <ul class="main-picture">
-             <li class="slide-icecream"><img src="first.slide" width="400" height="400" alt="2 вкусных рожка мороженого"><h1>Крем-брюле и пломбир с малиновым джемом</h1>
+          <ul class="main-slide">
+             <li class="icecream-slide">
+             <h1>
+             Крем-брюле и пломбир с малиновым джемом
+             <img src="first.slide" width="400" height="400" alt="2 вкусных рожка мороженого">
+             </h1>
              </li>
-             <li class="slide-icecream"><img src="second.slide" width="400" height="400" alt="2 вкусных рожка мороженого"><h1>Где другие подписи слайдов?</h1>
+             <li class="icecream-slide">
+             <h1>Где другие подписи слайдов?
+             <img src="second.slide" width="400" height="400" alt="2 вкусных рожка мороженого">
+             </h1>
              </li>
-              <li class="slide-icecream"><img src="third.slide" width="400" height="400" alt="2 вкусных рожка мороженого"><h1>Где другие подписи слайдов?</h1></li>
+              <li class="icecream-slide">
+              <h1>Где другие подписи слайдов?
+              <img src="third.slide" width="400" height="400" alt="2 вкусных рожка мороженого">
+              </h1>
+              </li>
         </ul>
              <span class="button button-receive">Давайте оба!</span>
      </figure>   
@@ -70,69 +89,121 @@
      </section>
      
      <!--Хиты-->
-     <h2 class="visually-hidden">Хиты</h2>
-     <table class="offers">
-         <tr class="offers-top">
-             <td>Хит</td>
-             <td>Хит</td>
-             <td>Хит</td>
-             <td>Хит</td>
-         </tr>
-         <tr class="offers-icecream">
-             <td><img src="icecream" width="100" height="100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
-             <td><img src="icecream" width="100" height="100" alt="Сливочное-кофейное с кусочками шоколада"></td>
-             <td><img src="icecream" width="100" height="100" alt="Сливочное-клубничное с присыпкой из белого шоколада"></td>
-             <td><img src="icecream" width="100" height="100" alt="Сливочное крем-брюле с карамельной подливкой"></td>
-         </tr>
-         <tr class="offers-price"><!--Как сделать символ рубля?-->
-             <td>310 Р / <span>кг</span></td>
-             <td>380 Р / <span>кг</span></td>
-             <td>355 Р / <span>кг</span></td>
-             <td>415 Р / <span>кг</span></td>
-         </tr>
-         <tr class="offers-description">
-             <td><h5>Сливочное с апельсиновым<br> джемом и цитрусовой стружкой</h5></td>
-             <td><h5>Сливочное-кофейное с кусочками<br> шоколада</h5></td>
-             <td><h5>Сливочное-клубничное с<br> присыпкой из белого шоколада</h5></td>
-             <td><h5>Сливочное крем-брюле с<br> карамельной подливкой</h5></td>
-         </tr>
-          <tr class="offers-fastlook">
-             <td><span class="button button-look">Быстрый просмотр</span></td>
-             <td><span class="button button-look">Быстрый просмотр</span></td>
-             <td><span class="button button-look">Быстрый просмотр</span></td>
-             <td><span class="button button-look">Быстрый просмотр</span></td>
-         </tr>
-     </table>
+     <section>
+     <h3 class="visually-hidden">Хиты</h3>
+      <ul class="catalog-list">
+                <li class="catalog-item">
+                    <h3>
+                        <a href="catalog-item.html">
+                            <span class="catalog-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+                        </a>
+                    </h3>
+                    <span class="catalog-item-hit">Хит</span>
+                    <p class="catalog-item-image">
+                        <img src="img/product-1.jpg" width="150" height="150" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                    </p>
+                    <p class="catalog-item-price">
+                        310 P <span>/кг</span>
+                    </p>
+                    <p class="button-item">
+                        <a href="catalog-item.html">
+                            <span class="button button-look">Быстрый просмотр</span>
+                        </a>
+                    </p>
+                </li>
+                <li class="catalog-item">
+                    <h3>
+                        <a href="catalog-item.html">
+                            <span class="catalog-item-title">Сливочно-кофейное с кусочками шоколада</span>
+                        </a>
+                    </h3>
+                    <span class="catalog-item-hit">Хит</span>
+                    <p class="catalog-item-image">
+                        <img src="img/product-1.jpg" width="150" height="150" alt="Сливочно-кофейное с кусочками шоколада">
+                    </p>
+                    <p class="catalog-item-price">
+                        380 P <span>/кг</span>
+                    </p>
+                    <p class="button-item">
+                        <a href="catalog-item.html">
+                            <span class="button button-look">Быстрый просмотр</span>
+                        </a>
+                    </p>
+                </li>
+                 <li class="catalog-item">
+                    <h3>
+                        <a href="catalog-item.html">
+                            <span class="catalog-item-title">Сливочно-клубничное с присыпкой из белого шоколада</span>
+                        </a>
+                    </h3>
+                    <span class="catalog-item-hit">Хит</span>
+                    <p class="catalog-item-image">
+                        <img src="img/product-1.jpg" width="150" height="150" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                    </p>
+                    <p class="catalog-item-price">
+                        355 P <span>/кг</span>
+                    </p>
+                    <p class="button-item">
+                        <a href="catalog-item.html">
+                            <span class="button button-look">Быстрый просмотр</span>
+                        </a>
+                    </p>
+                </li>
+                <li class="catalog-item">
+                    <h3>
+                        <a href="catalog-item.html">
+                            <span class="catalog-item-title">Сливочное крем-брюле с карамельной подливкой</span>
+                        </a>
+                    </h3>
+                    <span class="catalog-item-hit">Хит</span>
+                    <p class="catalog-item-image">
+                        <img src="img/product-1.jpg" width="150" height="150" alt="Сливочное крем-брюле с карамельной подливкой">
+                    </p>
+                    <p class="catalog-item-price">
+                        415 P <span>/кг</span>
+                    </p>
+                    <p class="button-item">
+                        <a href="catalog-item.html">
+                            <span class="button button-look">Быстрый просмотр</span>
+                        </a>
+                    </p>
+                </li>
+        </ul>  
+       </section>  
      
      <!--Особенности-->
-     <h3 class="visually-hidden">Особенности</h3>
      <section class="features">
-         <h3>Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженого собственного<br> производства на развес</h3>
-         <table>
-             <tr>
-                 <td class="icon first-icon"></td>
-                 <td><p>Все наше мороженое изготавливается на собственном<br> производстве, с использованием современного оборудования<br> и проверенных временем технологий.</p></td>
-                 <td class="icon second-icon"></td>
-                 <td><p>Закупка ингредиентов производится только у проверенных<br> фермерских хозяйств и компаний, с которыми нас связывает<br> долговременное сотрудничество.</p></td>
-             </tr>
-             <tr>
-                 <td class="icon third-icon"></td>
-                 <td><p>Для приготовления мороженого используются настоящие<br> сливки и молоко высочайшего качества. Все дополнительные<br> ингредиенты и добавки произведены из натурального,<br> экологически чистого сырья.</p></td>
-                 <td class="icon forth-icon"></td>
-                 <td><p>Доставка нашего мороженого до заказчиков осуществляется<br> в специальном термопаке, который не дает мороженому<br> растаять в пути и позволяет сохранить превосходный вкус.</p></td>
-             </tr>
-         </table>
+     <h4 class="visually-hidden">Особенности</h4>
+         <h4>Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженого собственного<br> производства на развес</h4>
+         <ul class="features-list">
+             <li class="features-element">
+                 <span class="icon icon-first-features"></span>
+                 <p>Все наше мороженое изготавливается на собственном<br> производстве, с использованием современного оборудования<br> и проверенных временем технологий.</p>
+             </li>
+             <li class="features-element">
+                 <span class="icon icon-second-features"></span>
+                 <p>Закупка ингредиентов производится только у проверенных<br> фермерских хозяйств и компаний, с которыми нас связывает<br> долговременное сотрудничество.</p>
+             </li>
+             <li class="features-element">
+                 <span class="icon icon-third-features"></span>
+                 <p>Для приготовления мороженого используются настоящие<br> сливки и молоко высочайшего качества. Все дополнительные<br> ингредиенты и добавки произведены из натурального,<br> экологически чистого сырья.</p>
+             </li>
+             <li class="features-element">
+                 <span class="icon icon-forth-features"></span>
+                 <p><p>Доставка нашего мороженого до заказчиков осуществляется<br> в специальном термопаке, который не дает мороженому<br> растаять в пути и позволяет сохранить превосходный вкус.</p>
+             </li>
+         </ul>
      </section>
      
      <!--Новости-->
-     <h4 class="visually-hidden">10 способов сервировки фруктовых щербетов к столу</h4>
+     <h5 class="visually-hidden">10 способов сервировки фруктовых щербетов к столу</h5>
      <article class="news">
          <p>Новое в нашем блоге</p>
          <a href="https://topice2017.ru/index.php/blog/20-fruit-cherbet">10 способов сервировки фруктовых щербетов к столу</a>
      </article>
      
      <!--Форма отправки-->
-     <h4 class="visually-hidden">Форма отправки</h4>
+     <h5 class="visually-hidden">Форма отправки</h5>
      <section class="form-dispatch">
          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
          <!--Будущий input-->
@@ -140,7 +211,7 @@
      </section>
      
      <!--Карта js-->
-     <h5 class="visually-hidden">Карта</h5>
+     <h6 class="visually-hidden">Карта</h6>
      <section>
          <p>Адрес главного офиса и офлайн-магазина<br>
          <span>ул. Большая конюшенная 19/8, Санкт-Петербург</span></p>
@@ -162,18 +233,28 @@
        </ul>
        
        <!--Различные контакты-->
-       <table>
-           <tr>
-               <td class="icon footer-icon"></td>
-               <td><a href="#">Для поставщиков</a></td>
-               <td><a href="#">Наши документы</a></td>
-           </tr>
-           <tr>
-               <td></td>
-               <td><a href="#">О производстве</a></td>
-               <td><a href="#">Экологические стандарты</a></td>
-           </tr>
-       </table>
+      <section>
+       <ul class="contacts-footer">
+           <li class="contacts-link">
+               <span class="icon icon-footer">Сердечко</span>
+               <a href="#">Для поставщиков</a>
+           </li>
+           <li class="contacts-link">
+               <a href="#">Наши документы</a>
+           </li>
+           <li class="contacts-link">
+               <a href="#">О производстве</a>
+           </li>
+           <li class="contacts-link">
+               <a href="#">Экологические стандарты</a>
+           </li>
+       </ul>
+       </section>
+       
+       <!--Логотип HTML Academy-->
+       <aside class="footer-copyright">
+        Сделано в <a class="button" href="https://htmlacademy.ru">HTML Academy</a> &#169 2017
+       </aside>
    </footer>
    
    <!--Различные всплывающие окна-->
@@ -199,26 +280,26 @@
        <span class="button button-entry">Войти</span>
    </section>
    
-   <!--Блок корзины-->
+  <!--Блок корзины-->
    <section class="bag-site">
        <table>
            <tr>
-               <td><span class="close">x</span></td>
-               <td><img src="icecream" width="20" height="20" alt=""></td>
+               <td><span class="close-item">x</span></td>
+               <td><img src="icecream" width="20" height="20" alt="Пломбир с апельсиновым джемом"></td>
                <td>Пломбир с апельсиновым джемом</td>
                <td>1,5 кг х <span>200 руб.</span></td>
                <td>300 руб.</td>
            </tr>
             <tr>
-               <td><span class="close">x</span></td>
-               <td><img src="icecream" width="20" height="20" alt=""></td>
+               <td><span class="close-item">x</span></td>
+               <td><img src="icecream" width="20" height="20" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                <td>1,5 кг х <span>300 руб.</span></td>
                <td>450 руб.</td>
            </tr>
        </table>
        <p><b>Итого: 750 руб.</b></p>
-       <span class="button button-order">Войти</span>
+       <span class="button button-order">Оформить заказ</span>
    </section>
   </body>
 </html>
