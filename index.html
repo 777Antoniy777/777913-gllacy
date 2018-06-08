@@ -37,17 +37,27 @@
             </ul>
             <!--Всплывающий блок поиска-->
             <div class="site-seacrh">
-                <!--поле инпута-->
+                <form method="get" action="#">
+                    <label for="search" class="visually-hidden">Поиск</label>
+                    <input type="search" name="search" id="search" placeholder="Что ищем?">
+                </form>
             </div>
-            <!--Вспдывающий блок входа-->
+            <!--Всплывающий блок входа-->
             <div class="site-entry">
-                <!--поле двух инпутов-->
-                <button type="submit" name="login">Войти</button>
+                <form class="field-entry" method="post" action="#">
+                    <label for="email-entry" class="visually-hidden">Электронная почта</label>>   
+                    <input type="email" name="email-entry" id="email-entry" placeholder="Электронная почта">
+                    <label for="password-entry" class="visually-hidden">Пароль</label>
+                    <input type="password" name="password-entry" id="password-entry" placeholder="Пароль">
+                    <button type="submit">Войти</button>
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
+                </form>    
             </div>
             <!--Контактная информация-->
             <p class="phone">
                 с 10 до 20, ежедневно<br>
-                <a href="+78124502525">8 812 450-25-25</a>
+                <a href="tel:+78124502525">8 812 450-25-25</a>
             </p>
         </header>
         <!--Основное содержание-->
@@ -71,6 +81,10 @@
                     <a href="#" class="button">Давайте оба!</a>
                 </li>
             </ul>
+            <!--3 кнопки для карусели-->
+                <button class="button-slider button-first-slider" type="button">Первый слайд</button>
+                <button class="button-slider sbutton-econd-slider" type="button">Второй слайд</button>
+                <button class="button-slider button-third-slider" type="button">Третий слайд</button>
             <!--2 колонки-->
             <section class="columns">
                 <h2 class="visually-hidden">Акции</h2>
@@ -176,8 +190,11 @@
             <section class="form-send">
                 <h3 class="visually-hidden">Форма отправки</h3>
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                <!--Будущий input-->
-                <button type="submit" name="send">Отправить</button>
+                <form class="send" method="post" action="#">
+                    <label for="email-send" class="visually-hidden">Электронная почта</label>
+                    <input type="email" name="email-send" id="email-send" placeholder="Электронная почта">
+                    <button type="submit">Отправить</button>
+                </form>
             </section>
             <!--Карта js-->
             <section class="map">
@@ -187,10 +204,10 @@
                         <span>ул. Большая конюшенная 19/8, Санкт-Петербург</span>
                     </p>
                     <p>Для заказов по телефону:
-                        <a href="+78124502525">8-812 450-25-25</a>
+                        <a href="tel:+78124502525">8-812 450-25-25</a>
                         (с 10 до 20 ежедневно)
                     </p>
-                    <button type="button" name="reverse">Форма обратной связи</button>
+                    <button type="button">Форма обратной связи</button>
                 </div>
             </section>
         </main>
@@ -228,5 +245,18 @@
                 <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &#169 2017</p>
             </aside>
         </footer>
+            <div>
+                <span>Мы обязательно вам ответим!</span>
+                <form class="reverse" method="post" action="#">
+                    <label for="name-reverse" class="visually-hidden">Ваше имя</label>
+                    <input type="text" name="name-reverse" id="name-reverse" placeholder="Как вас зовут?">
+                    <label for="email-reverse" class="visually-hidden">Ваша электронная почта</label>
+                    <input type="email" name="email-reverse" id="email-reverse" placeholder="Ваша почта для ответа?">
+                    <label for="comment-reverse" class="visually-hidden">Ваш комментарий</label>
+                    <textarea name="comment-reverse" id="comment-reverse" placeholder="Напишите что-нибудь..." rows="10"></textarea>
+                    <button type="submit">Отправить</button>
+                    <button type="button">Закрыть</button>       
+                </form>       
+            </div>
     </body>
 </html>
