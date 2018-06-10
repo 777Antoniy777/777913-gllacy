@@ -37,15 +37,15 @@
             </ul>
             <!--Всплывающий блок поиска-->
             <div class="site-seacrh">
-                <form method="get" action="#">
+                <form method="get" action="https://echo.htmlacademy.ru">
                     <label for="search" class="visually-hidden">Поиск</label>
                     <input type="search" name="search" id="search" placeholder="Что ищем?">
                 </form>
             </div>
             <!--Всплывающий блок входа-->
             <div class="site-entry">
-                <form class="field-entry" method="post" action="#">
-                    <label for="email-entry" class="visually-hidden">Электронная почта</label>>   
+                <form class="field-entry" method="post" action="https://echo.htmlacademy.ru">
+                    <label for="email-entry" class="visually-hidden">Электронная почта</label>   
                     <input type="email" name="email-entry" id="email-entry" placeholder="Электронная почта">
                     <label for="password-entry" class="visually-hidden">Пароль</label>
                     <input type="password" name="password-entry" id="password-entry" placeholder="Пароль">
@@ -56,24 +56,26 @@
             </div>
             <!--Всплывающий блок корзины-->
             <div class="site-basket">
-                <table>
-                    <tr>
-                        <td><button type="button" class="close">Закрыть<img src="img/svg-gllacy/cross-small.svg" alt="Закрыть"></button></td>
-                        <td><img src="img/product1-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
-                        <td>Пломбир с апельсиновым джемом</td>
-                        <td>1,5 кг х <span>200 руб.</span></td>
-                        <td>300 руб.</td>
-                    </tr>
-                    <tr>
-                        <td><button type="button" class="close">Закрыть<img src="img/svg-gllacy/cross-small.svg" alt="Закрыть"></button></td>
-                        <td><img src="img/product1-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-                        <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                        <td>1,5 кг х <span>300 руб.</span></td>
-                        <td>450 руб.</td>
-                    </tr>
-                </table>
-                <p><b>Итого: 750 руб.</b></p>
-                <button type="submit" name="buy">Оформить заказ</button>
+                <form method="post" action="https://echo.htmlacademy.ru">
+                    <table>
+                        <tr>
+                            <td><button type="button" class="close">Закрыть<img src="img/svg-gllacy/cross-small.svg" alt="Закрыть"></button></td>
+                            <td><img src="img/product1-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                            <td>Пломбир с апельсиновым джемом</td>
+                            <td>1,5 кг х <span>200 руб.</span></td>
+                            <td>300 руб.</td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="close">Закрыть<img src="img/svg-gllacy/cross-small.svg" alt="Закрыть"></button></td>
+                            <td><img src="img/product1-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                            <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                            <td>1,5 кг х <span>300 руб.</span></td>
+                            <td>450 руб.</td>
+                        </tr>
+                    </table>
+                    <p><b>Итого: 750 руб.</b></p>
+                    <button type="submit" class="button">Оформить заказ</button>
+                </form>
             </div>
             <!--Контактная информация-->
             <p class="phone">
@@ -93,62 +95,44 @@
             <!--Сортировка в каталоге-->
             <section class="filters">
                 <h2 class="visually-hidden">Фильтр товаров</h2>
-                   <form method="post" action="#">
+                   <form method="post" action="https://echo.htmlacademy.ru">
                        <div class="sorting">
                            <label for="list-sorting">Сортировка:</label>
                            <select name="list-sorting" id="list-sorting">
-                               <option>по популярности</option>
-                               <option>сначала недорогие</option>
-                               <option>сначала дорогие</option>
-                               <option>по жирности</option>
+                               <option value="by-popularity">по популярности</option>
+                               <option value="by-cheap">сначала недорогие</option>
+                               <option value="by-expensive">сначала дорогие</option>
+                               <option value="by-fat">по жирности</option>
                            </select>
                        </div>
                        <div class="range"><!--Сделать div переключатель-->
                            <label for="diapason">Цена: 100 руб. - 500 руб.</label>
-                           <input type="range" nsme="diaposon" id="diapason">
+                           <input type="range" name="diapason" id="diapason">
                        </div>
-                       <div class="fat">
-                           <label for="fat">Жирность:</label>
-                               <label>
-                                   <input type="radio" name="fat" id="fat">
-                                   0%
-                               </label>
-                               <label>
-                                   <input type="radio" name="fat" id="fat">
-                                   до 10%
-                               </label>
-                               <label>
-                                   <input type="radio" name="fat" id="fat">
-                                   до 30%
-                               </label>
-                               <label>
-                                   <input type="radio" name="fat" id="fat">
-                                   выше 30%
-                               </label>
-                       </div> 
-                       <div class="content">
-                           <label for="content">Жирность:</label>
-                               <label>
-                                   <input type="checkbox" name="first-content" id="content">
-                                   шоколадные
-                               </label>
-                               <label>
-                                   <input type="checkbox" name="second-content" id="content">
-                                   сахарные присыпки
-                               </label>
-                               <label>
-                                   <input type="checkbox" name="third-content" id="content">
-                                   фрукты
-                               </label>
-                               <label>
-                                   <input type="checkbox" name="forth-content" id="content">
-                                   сиропы
-                               </label>
-                               <label>
-                                   <input type="checkbox" name="fifth-content" id="content">
-                                   джемы
-                               </label>
-                       </div>   
+                       <fieldset class="fat">
+                           <legend>Жирность:</legend>
+                               <input type="radio" name="fat" id="zero-percent">
+                               <label for="zero-percent">0%</label>
+                               <input type="radio" name="fat" id="to-ten-percent">
+                               <label for="to-ten-percent">до 10%</label>
+                               <input type="radio" name="fat" id="to-thirty-percent">
+                               <label for="to-thirty-percent">до 30%</label>          
+                               <input type="radio" name="fat" id="up-to-thirty-percent">
+                               <label for="up-to-thirty-percent">до 30%</label>  
+                       </fieldset> 
+                       <fieldset class="fillers">   
+                           <legend>Наполнители:</legend>
+                               <input type="checkbox" name="chocolate" id="chocolate">
+                               <label for="chocolate">шоколадные</label>
+                               <input type="checkbox" name="sugar-powders" id="sugar-powders">
+                               <label for="sugar-powders">сахарные присыпки</label>
+                               <input type="checkbox" name="fruits" id="fruits">
+                               <label for="fruits">фрукты</label>
+                               <input type="checkbox" name="syrups" id="syrups">
+                               <label for="syrups">сиропы</label>
+                               <input type="checkbox" name="jams" id="jams">
+                               <label for="jams">джемы</label>   
+                       </fieldset>        
                        <button type="submit" class="button button-apply">Применить</button>
                    </form>
             </section>
