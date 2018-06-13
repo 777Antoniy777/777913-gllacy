@@ -52,7 +52,7 @@
                     <button type="submit" class="button">Войти</button>
                     <a href="#">Забыли пароль?</a>
                     <a href="#">Новая регистрация</a>
-                </form>    
+                </form>
             </div>
             <!--Контактная информация-->
             <p class="phone">
@@ -82,9 +82,11 @@
                 </li>
             </ul>
             <!--3 кнопки для карусели-->
+            <div class="buttons-sliders">  
                 <button class="button-slider button-first-slider" type="button">Первый слайд</button>
-                <button class="button-slider sbutton-econd-slider" type="button">Второй слайд</button>
+                <button class="button-slider button-second-slider" type="button">Второй слайд</button>
                 <button class="button-slider button-third-slider" type="button">Третий слайд</button>
+            </div>
             <!--2 колонки-->
             <section class="columns">
                 <h2 class="visually-hidden">Акции</h2>
@@ -163,7 +165,6 @@
             </section>
             <!--Особенности-->
             <section class="features">
-                <h2 class="visually-hidden">Особенности</h2>
                 <h2>Магазин Глейси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
                 <ul class="features-list">
                     <li class="features-element">
@@ -182,13 +183,12 @@
             </section>
             <!--Новости-->
             <article class="news">
-                <h3 class="visually-hidden">Новое в нашем блоге</h3>
                 <h3>Новое в нашем блоге</h3>
                 <a href="https://topice2017.ru/index.php/blog/20-fruit-cherbet">10 способов сервировки фруктовых щербетов к столу</a>
             </article>
             <!--Форма отправки-->
             <section class="form-send">
-                <h3 class="visually-hidden">Форма отправки</h3>
+                <h3 class="visually-hidden">Форма подписки на рассылку</h3>
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                 <form class="send" method="post" action="https://echo.htmlacademy.ru">
                     <label for="email-send" class="visually-hidden">Электронная почта</label>
@@ -207,7 +207,7 @@
                         <a href="tel:+78124502525">8-812 450-25-25</a>
                         (с 10 до 20 ежедневно)
                     </p>
-                    <button type="button" class="button">Форма обратной связи</button>
+                    <a href="#" class="button">Форма обратной связи</a>
                 </div>
             </section>
         </main>
@@ -245,18 +245,18 @@
                 <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &#169 2017</p>
             </aside>
         </footer>
-            <div class="reverse">
-                <span>Мы обязательно вам ответим!</span>
-                <form class="form-reverse" method="post" action="https://echo.htmlacademy.ru">
-                    <label for="name-reverse" class="visually-hidden">Ваше имя</label>
-                    <input type="text" name="name-reverse" id="name-reverse" placeholder="Как вас зовут?">
-                    <label for="email-reverse" class="visually-hidden">Ваша электронная почта</label>
-                    <input type="email" name="email-reverse" id="email-reverse" placeholder="Ваша почта для ответа?">
-                    <label for="comment-reverse" class="visually-hidden">Ваш комментарий</label>
-                    <textarea name="comment-reverse" id="comment-reverse" placeholder="Напишите что-нибудь..." rows="10"></textarea>
-                    <button type="submit" class="button">Отправить</button>
-                    <button type="button" class="close">Закрыть<img src="img/svg-gllacy/cross-big.svg" alt="Закрыть"></button>       
-                </form>       
-            </div>
+        <div class="feedback">
+            <span>Мы обязательно вам ответим!</span>
+            <form class="form-feedback" method="post" action="https://echo.htmlacademy.ru">
+                <label for="name-feedback" class="visually-hidden">Ваше имя</label>
+                <input type="text" name="name-feedback" id="name-reverse" placeholder="Как вас зовут?">
+                <label for="email-feedback" class="visually-hidden">Ваша электронная почта</label>
+                <input type="email" name="email-feedback" id="email-reverse" placeholder="Ваша почта для ответа?">
+                <label for="comment-feedback" class="visually-hidden">Ваш комментарий</label>
+                <textarea name="comment-feedback" id="comment-reverse" placeholder="Напишите что-нибудь..." rows="10"></textarea>
+                <button type="submit" class="button">Отправить</button>
+                <button type="button" class="close">Закрыть<img src="img/svg-gllacy/cross-big.svg" alt="Закрыть"></button>       
+            </form>
+        </div>
     </body>
 </html>
