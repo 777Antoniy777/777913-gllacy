@@ -1,0 +1,74 @@
+/*@font-face {
+  font-family: "Roboto";
+  src: url("roboto.eot");
+  src: local("Roboto"), local("Roboto Bold"), local("Roboto Medium"),
+       url("roboto.eot?#iefix") format("embeddded-opentype"), 
+       url("roboto.woff") format("woff");
+}*/
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 1200px;
+}
+
+body {
+  width: 1200px;
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: #849d8f;
+}
+
+/* постоянные стили для ссылок, списков, кнопок*/
+a {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+}
+
+.button {
+  background-image: linear-gradient(90deg, #f26843, #e74b36);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/*стили заголовка*/
+.main-header {
+  font-family: "Roboto";
+  color: #ffffff;
+}
+
+.phone {
+  font-weight: bold;
+}
+
+.phone a {
+  font-weight: bold;
+}
+
+/*стили основной части*/
+.container {
+  font-family: "Roboto";
+  color: #ffffff;
+}
+
+.main-slider h1 {
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.main-slider a {    /*!!!!!!!!не меняется размер кнопки*/
+  width: 279px;
+  height: 65px;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.columns .first-column {
+  background-image: url("img/raspberries-background.jpg");
+  
+}
