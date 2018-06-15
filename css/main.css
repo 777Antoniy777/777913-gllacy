@@ -14,12 +14,12 @@ html {
 }
 
 body {
-  width: 1200px;
+  min-width: 1200px;
   font-family: "Roboto", "Arial", sans-serif;
   background-color: #849d8f;
 }
 
-/* постоянные стили для ссылок, списков, кнопок*/
+/* постоянные стили для ссылок, списков, кнопок, инпутов и visually-hidden*/
 a {
   font-weight: bold;
   color: #ffffff;
@@ -27,13 +27,33 @@ a {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 .button {
   background-image: linear-gradient(90deg, #f26843, #e74b36);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
-  border-radius: 20px;
+  border-radius: 25px;
   text-decoration: none;
+  padding: 10px 15px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="search"],
+input[type="password"] {
+  height: 38px;
+  border-radius: 10px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*стили заголовка*/
@@ -43,11 +63,15 @@ ul {
 }
 
 .phone {
+  font-size: 14px;
+  line-height: 16px;
   font-weight: bold;
 }
 
 .phone a {
-  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+  text-decoration: none;
 }
 
 /*стили основной части*/
@@ -59,16 +83,234 @@ ul {
 .main-slider h1 {
   font-weight: bold;
   font-size: 60px;
+  line-height: 60.35px;
 }
 
 .main-slider a {    /*!!!!!!!!не меняется размер кнопки*/
-  width: 279px;
-  height: 65px;
   font-size: 32px;
   line-height: 44px;
+  padding: 7px 25px;
 }
 
 .columns .first-column {
-  background-image: url("img/raspberries-background.jpg");
+  width: 560px;
+  height: 230px;
+  background-image: url("/GitHub/777913-gllacy/img/raspberries-background.jpg");
+  background-position: -50px -94px;
+  background-position: no-repeat;
+  border-radius: 15px;
   
+}
+
+.columns .second-column {
+  width: 560px;
+  height: 230px;
+  background-image: url("/GitHub/777913-gllacy/img/chocolate-background.jpg");
+  background-position: -217px -105px;
+  background-position: no-repeat;
+  border-radius: 15px; 
+}
+
+.columns h2 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+}
+
+.columns p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.columns a {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.hits .catalog-list h3 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  border-bottom: 1px solid #9db1a5;
+}
+
+.hits .catalog-list img {
+  border-radius: 50%;
+}
+
+.hits .catalog-list .catalog-item-price  {
+  font-size: 30px;
+  line-height: 45x;
+  font-weight: 500; 
+}
+
+.hits .catalog-list .catalog-item-price span {
+  font-size: 20px;
+  line-height: 45x;
+  font-weight: 500; 
+}
+
+.hits .catalog-list a {
+  font-size: 18px;
+  line-height: 24x;
+}
+
+.features {
+  width: 1146px;
+  height: 308px; 
+  background-image: url("/GitHub/777913-gllacy/img/Вафля.jpg");
+  border-radius: 15px;
+  color: black;
+}
+
+.features h2 {
+  font-size: 24px;
+  line-height: 30x;
+  font-weight: 500;
+}
+
+.features .features-list p {
+  font-size: 16px;
+  line-height: 22x;
+  font-weight: normal;
+}
+
+.news {
+  width: 560px;
+  height: 220px; 
+  background-image: url("/GitHub/777913-gllacy/img/Клубничный фон.jpg");
+  background-repeat: no-repeat;
+  background-position: -52px -86px;
+  border-radius: 15px;
+}
+
+.news h3 {
+  color: black;
+  font-size: 16px;
+  line-height: 22x;
+  font-weight: 500;
+}
+
+.news a {
+  font-size: 24px;
+  line-height: 30x;
+  font-weight: bold;
+  color: black;
+}
+
+.form-send {
+  width: 560px;
+  height: 220px;
+  background-color: #f8f7f4;
+  background-image: url("/GitHub/777913-gllacy/img/Рамка формы отправки.png");
+  border-radius: 15px;
+}
+
+.form-send p {
+  font-size: 16px;
+  line-height: 22x;
+  font-weight: normal;
+  color: #5a5a5a;
+}
+
+.form-send .send button {
+  font-size: 18px;
+  line-height: 24x;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.form-send .send input[type="email"] {
+  width: 368px;
+  padding-left: 15px;
+  box-sizing: border-box;
+} 
+
+.map {
+  width: 1200px;
+  height: 432px;
+  background-image: url("/GitHub/777913-gllacy/img/map.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;  
+}
+
+.map .map-content {
+  padding: 20px;
+  width: 262px;
+  height: 263px;
+  background-color: #fffffe;
+  border-radius: 15px;
+}
+
+.map .map-content p {
+  text-align: left;
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 20x;
+  font-weight: normal;
+  color: #323232;
+}
+
+.map .map-content p span {  /*закончил здесь*/
+  white-space: normal;
+  padding: 0px;
+  text-align: left;
+}
+
+.map .map-content p a {
+  margin: 10px;
+  text-align: center;
+}
+
+.map .map-content a {
+  font-size: 18px;
+  line-height: 24x;
+  font-weight: bold;
+  color: #323232;
+  text-decoration: none;
+}
+
+.map .map-content .button {
+  font-size: 18px;
+  line-height: 24x;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.map .map-content span {
+  font-size: 18px;
+  line-height: 24x;
+  font-weight: bold;
+  color: #323232; 
+}
+
+.contacts-footer .contacts-link a {
+  font-size: 13px;
+  line-height: 28x;
+  font-weight: normal;
+  text-decoration: none;
+  border-bottom: 1px solid #9db1a5;
+}
+
+.contacts-footer .icon-heart a {
+  font-weight: bold;
+}
+
+.contacts-footer .icon-heart {
+  background-image: url("/GitHub/777913-gllacy/img/svg-gllacy/heart.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.footer-copyright p {
+  font-size: 12px;
+  line-height: 18x;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.footer-copyright p a {
+  text-decoration: none;
+  border-bottom: 1px solid #9db1a5;
 }
