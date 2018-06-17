@@ -36,6 +36,8 @@ ul {
   border-radius: 25px;
   text-decoration: none;
   padding: 10px 15px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 input[type="email"],
@@ -43,7 +45,10 @@ input[type="text"],
 input[type="search"],
 input[type="password"] {
   height: 38px;
-  border-radius: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid rgb(178, 178, 178);
+  box-shadow: none;
 }
 
 .visually-hidden {
@@ -56,16 +61,118 @@ input[type="password"] {
   overflow: hidden;
 }
 
-/*стили заголовка*/
+/*стили хедера гл.стр.*/
 .main-header {
   font-family: "Roboto";
   color: #ffffff;
 }
 
+.main-navigation .site-navigation a {
+  font-weight: normal;
+  text-decoration: none;
+  border-bottom: 1px solid #9db1a5;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.site-menu {
+  width: 142px;
+  height: 172px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+} 
+
+.site-menu li:hover:not(:first-child) { 
+  background-color: #fbded8; 
+}
+
+.site-menu a {
+  color: #323232;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+.site-menu li {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+  padding-top: 5px;
+}
+
+.site-menu li:nth-of-type(1) a {
+  font-weight: bold;
+}
+
+.site-menu li:nth-of-type(1) {
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #323232;
+  margin-right: 6px;
+  margin-left: 6px;
+} 
+
+.site-menu li:nth-of-type(2) {
+  padding-top: 10px;
+} 
+
+.site-seacrh {
+  width: 341px;
+  height: 84px;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+}
+
+.site-seacrh input[type="search"] {
+  width: 309px;
+  height: 44px;
+  margin: 21px 16px;
+  padding-left: 14px;
+}
+
+.site-entry {
+  width: 278px;
+  height: 214px;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+}
+
+.site-entry 
+input[type="email"],
+input[type="password"] {
+  width: 240px;
+  height: 44px;
+  margin: 20px 20px 0px 20px;
+  padding-left: 14px;
+}
+
+.site-entry .button {
+  padding: 13px 25px;
+  margin: 20px;
+}
+
+.site-entry p {        /*некорректное нажатие на кнопку из-за магинов ссылок*/
+  white-space: pre;
+  text-align: left;
+  margin: -84px 0 0 60px;
+}
+
+.site-entry p a {
+  color: #323232;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: normal;
+  text-decoration: underline #323232;
+}
+
 .phone {
   font-size: 14px;
   line-height: 16px;
-  font-weight: bold;
+  font-weight: bold; 
 }
 
 .phone a {
@@ -74,7 +181,7 @@ input[type="password"] {
   text-decoration: none;
 }
 
-/*стили основной части*/
+/*стили основной части гл.стр.*/
 .container {
   font-family: "Roboto";
   color: #ffffff;
@@ -86,7 +193,7 @@ input[type="password"] {
   line-height: 60.35px;
 }
 
-.main-slider a {    /*!!!!!!!!не меняется размер кнопки*/
+.main-slider a {   
   font-size: 32px;
   line-height: 44px;
   padding: 7px 25px;
@@ -216,15 +323,12 @@ input[type="password"] {
 
 .form-send .send button {
   font-size: 18px;
-  line-height: 24x;
-  font-weight: bold;
-  color: #ffffff;
+  line-height: 24px;
 }
 
 .form-send .send input[type="email"] {
-  width: 368px;
-  padding-left: 15px;
-  box-sizing: border-box;
+  width: 338px;
+  padding: 15px;
 } 
 
 .map {
@@ -244,18 +348,20 @@ input[type="password"] {
 }
 
 .map .map-content p {
+  white-space: pre;
   text-align: left;
-  padding-bottom: 10px;
+  padding-left: 0px;
+  
   font-size: 14px;
   line-height: 20x;
   font-weight: normal;
   color: #323232;
 }
 
-.map .map-content p span {  /*закончил здесь*/
-  white-space: normal;
-  padding: 0px;
+.map .map-content p span {  /*как сделать соответствие макету?*/
+  white-space: pre;
   text-align: left;
+  padding: 0px;
 }
 
 .map .map-content p a {
@@ -274,7 +380,6 @@ input[type="password"] {
 .map .map-content .button {
   font-size: 18px;
   line-height: 24x;
-  font-weight: bold;
   color: #ffffff;
 }
 
@@ -284,6 +389,12 @@ input[type="password"] {
   font-weight: bold;
   color: #323232; 
 }
+
+/*стили футера гл.стр.*/
+.main-footer {
+  font-family: "Roboto";
+  color: #ffffff;
+} 
 
 .contacts-footer .contacts-link a {
   font-size: 13px;
@@ -313,4 +424,43 @@ input[type="password"] {
 .footer-copyright p a {
   text-decoration: none;
   border-bottom: 1px solid #9db1a5;
+}
+
+.feedback {
+  width: 430px;
+  height: 400px;
+  background-color: #f8f7f4;
+  border-radius: 10px;
+  padding: 17px 24px 26px 24px;
+}
+
+.feedback span {
+  font-size: 24px;
+  line-height: 28x;
+  font-weight: bold;
+  color: #323232;
+}
+
+.feedback .form-feedback {
+  margin-top: 23px;
+}
+
+.feedback .form-feedback 
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 14px; 
+  margin-bottom: 20px;
+}
+
+.feedback .form-feedback 
+input[type="text"],
+input[type="email"] {
+  width: 267px;
+}
+
+.feedback .form-feedback textarea {
+  width: 400px;
+  height: 155px;
+  margin-bottom: 15px;
 }
