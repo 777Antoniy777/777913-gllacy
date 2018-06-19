@@ -1,20 +1,12 @@
-/*@font-face {
-  font-family: "Roboto";
-  src: url("roboto.eot");
-  src: local("Roboto"), local("Roboto Bold"), local("Roboto Medium"),
-       url("roboto.eot?#iefix") format("embeddded-opentype"), 
-       url("roboto.woff") format("woff");
-}*/
-
 body,
 html {
   margin: 0;
   padding: 0;
-  width: 1200px;
+  min-width: 1200px;
 }
 
 body {
-  min-width: 1200px;
+  width: 1200px;
   font-family: "Roboto", "Arial", sans-serif;
   background-color: #849d8f;
 }
@@ -26,16 +18,19 @@ a {
 }
 
 ul {
-  list-style: none;
+  list-style: none; /*пока еще не ставил классы*/
   padding: 0;
+  margin: 0;
 }
 
 .button {
-  background-image: linear-gradient(90deg, #f26843, #e74b36);
+  display: inline-block;
+  background-image: linear-gradient(to bottom, #f26843, #e74b36);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   border-radius: 25px;
+  border: none;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 10px 20px;
   color: #ffffff;
   font-weight: bold;
 }
@@ -67,7 +62,58 @@ input[type="password"] {
   color: #ffffff;
 }
 
-.main-navigation .site-navigation a {
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-header-logo {
+  display: inline-block;
+  margin-left: 28px;
+  margin-top: 12px;
+  align-self: center;
+}
+
+.header-navigation-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-basis: 450px;
+  
+  margin-left: 23px;
+}
+
+.site-navigation li {
+  display: inline-block;
+  margin-right: 27px;
+  vertical-align: middle;
+}
+
+.site-navigation li:nth-child(1):hover {
+  background-color: #f7f6f3;
+  width: 87px;
+  height: 17px;
+  padding: 9px 4px;
+  border-radius: 20px;
+  margin-left: -18px;  /*тоже пришлось минус ставить, без него сдвигается*/
+}
+
+.site-navigation a:nth-child(1):hover {
+  display: block;
+  border: none;
+  color: #323232;
+  text-align: center;
+  padding: 0px 14px;
+}
+
+.site-navigation a {
   font-weight: normal;
   text-decoration: none;
   border-bottom: 1px solid #9db1a5;
@@ -76,8 +122,120 @@ input[type="password"] {
   font-weight: bold;
 }
 
+.user-navigation {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-basis: 450px;
+  
+  margin-right: 28px;
+}
+
+.user-navigation li {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.icon-search {
+  position: relative;
+  max-width: 25px;
+  padding-left: 8px;
+  
+  background-color: #9eb3a8;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.icon-search span {
+  padding-left: 0px;
+  padding-top: 0px;
+}
+
+.icon-search::before {
+  position: absolute;
+  content: "";
+  margin-top: 8px;
+  background-image: url("../img/svg-gllacy/loupe.svg");
+  background-repeat: no-repeat;
+  background-position:  0;
+  left: 9px;
+  top: -3px;
+  width: 22px;
+  height: 21px;
+}
+
+.icon-login {
+  position: relative;
+  max-width: 100px;
+  padding-left: 8px;
+  padding-top: 8px;
+  
+  background-color: #9eb3a8;
+  width: 92px;
+  height: 25px;
+  border-radius: 20px;
+}
+
+.icon-login span {
+  padding-left: 20px;
+  padding-top: 8px;
+}
+
+.icon-login::before {
+  position: absolute;
+  content: "";
+  margin-top: 8px;
+  background-image: url("../img/svg-gllacy/white-entrance.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 18px;
+  top: -1px;
+  width: 20px;
+  height: 20px;
+  
+  background-color: black;
+}
+
+.icon-basket-empty {
+  position: relative;
+  max-width: 100px;
+  padding-left: 8px;
+  padding-top: 8px;
+  
+  background-color: #9eb3a8;
+  width: 100px;
+  height: 25px;
+  border-radius: 20px;
+}
+
+.icon-basket-empty span {
+  padding-left: 20px;
+  padding-top: 8px;
+}
+
+.icon-basket-empty::before {
+  position: absolute;
+  content: "";
+  margin-top: 8px;
+  background-image: url("../img/svg-gllacy/basket.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 18px;
+  top: -1px;
+  width: 22px;
+  height: 21px;
+}
+
 .site-menu {
+  position: absolute;
+  top: 68px;
+  left: 190px;
   width: 142px;
+  min-height: 172px;
   height: 172px;
   background-color: #f8f7f4;
   border-radius: 5px;
@@ -121,8 +279,11 @@ input[type="password"] {
 } 
 
 .site-seacrh {
+  position: absolute;
+  right: 257px;
+  top: 62px;
   width: 341px;
-  height: 84px;
+  min-height: 84px;
   border-radius: 5px;
   background-color: #f8f7f4;
 }
@@ -135,8 +296,11 @@ input[type="password"] {
 }
 
 .site-entry {
+  position: absolute;
+  right: 147px;
+  top: 62px;
   width: 278px;
-  height: 214px;
+  min-height: 214px;
   border-radius: 5px;
   background-color: #f8f7f4;
 }
@@ -155,13 +319,13 @@ input[type="password"] {
   margin: 20px;
 }
 
-.site-entry p {        /*некорректное нажатие на кнопку из-за магинов ссылок*/
+.site-entry p {        /*некорректное нажатие на кнопку из-за магинов ссылок, убрать white-space*/
   white-space: pre;
   text-align: left;
   margin: -84px 0 0 60px;
 }
 
-.site-entry p a {
+.site-entry a {
   color: #323232;
   font-size: 13px;
   line-height: 24px;
@@ -170,15 +334,23 @@ input[type="password"] {
 }
 
 .phone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+  
+  margin-right: 28px;
 }
 
 .phone a {
   font-size: 22px;
   line-height: 24px;
   text-decoration: none;
+  margin-top: 5px;
 }
 
 /*стили основной части гл.стр.*/
@@ -199,94 +371,123 @@ input[type="password"] {
   padding: 7px 25px;
 }
 
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
 .columns .first-column {
   width: 560px;
-  height: 230px;
-  background-image: url("/GitHub/777913-gllacy/img/raspberries-background.jpg");
-  background-position: -50px -94px;
+  min-height: 230px;
+  background-image: url("../img/raspberries-background.jpg");
+  background-position: -50px -94px;  
   background-position: no-repeat;
   border-radius: 15px;
-  
+  margin-left: 27px;
 }
 
 .columns .second-column {
   width: 560px;
-  height: 230px;
-  background-image: url("/GitHub/777913-gllacy/img/chocolate-background.jpg");
+  min-height: 230px;
+  background-image: url("../img/chocolate-background.jpg");
   background-position: -217px -105px;
   background-position: no-repeat;
   border-radius: 15px; 
+  margin-right: 27px;
 }
 
 .columns h2 {
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
+  margin-top: 21px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  border: 0;
 }
 
 .columns p {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
+  margin-top: 16px;
+  margin-left: 20px;
+  margin-bottom: 0;
 }
 
 .columns a {
   font-size: 18px;
   line-height: 24px;
+  margin-top: 44px;
 }
 
-.hits .catalog-list h3 {
+.first-column a {
+  padding-left: 21px;
+  padding-right: 21px;
+  margin-left: 375px;
+  margin-right: 22px;
+}
+
+.second-column a {
+  padding-left: 21px;
+  padding-right: 21px;
+  margin-left: 350px;
+  margin-right: 22px;
+}
+
+.catalog-list h3 {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
   border-bottom: 1px solid #9db1a5;
 }
 
-.hits .catalog-list img {
+.catalog-list img {
   border-radius: 50%;
 }
 
-.hits .catalog-list .catalog-item-price  {
+.catalog-list .catalog-item-price  {
   font-size: 30px;
-  line-height: 45x;
+  line-height: 45px;
   font-weight: 500; 
 }
 
-.hits .catalog-list .catalog-item-price span {
+.catalog-item-price span {
   font-size: 20px;
-  line-height: 45x;
+  line-height: 45px;
   font-weight: 500; 
 }
 
-.hits .catalog-list a {
+.catalog-list a {
   font-size: 18px;
-  line-height: 24x;
+  line-height: 24px;
 }
 
 .features {
   width: 1146px;
-  height: 308px; 
-  background-image: url("/GitHub/777913-gllacy/img/Вафля.jpg");
+  min-height: 308px; 
+  background-image: url("../img/wafer.jpg");
   border-radius: 15px;
   color: black;
 }
 
 .features h2 {
   font-size: 24px;
-  line-height: 30x;
+  line-height: 30px;
   font-weight: 500;
 }
 
-.features .features-list p {
+.features-list p {
   font-size: 16px;
-  line-height: 22x;
+  line-height: 22px;
   font-weight: normal;
 }
 
 .news {
   width: 560px;
-  height: 220px; 
-  background-image: url("/GitHub/777913-gllacy/img/Клубничный фон.jpg");
+  min-height: 220px; 
+  background-image: url("../img/strawberry-background.jpg");
   background-repeat: no-repeat;
   background-position: -52px -86px;
   border-radius: 15px;
@@ -295,97 +496,93 @@ input[type="password"] {
 .news h3 {
   color: black;
   font-size: 16px;
-  line-height: 22x;
+  line-height: 22px;
   font-weight: 500;
 }
 
 .news a {
   font-size: 24px;
-  line-height: 30x;
+  line-height: 30px;
   font-weight: bold;
   color: black;
 }
 
 .form-send {
   width: 560px;
-  height: 220px;
+  min-height: 220px;
   background-color: #f8f7f4;
-  background-image: url("/GitHub/777913-gllacy/img/Рамка формы отправки.png");
+  background-image: url("../img/formsend-gradient.png");
   border-radius: 15px;
 }
 
 .form-send p {
   font-size: 16px;
-  line-height: 22x;
+  line-height: 22px;
   font-weight: normal;
   color: #5a5a5a;
 }
 
-.form-send .send button {
+.send button {
   font-size: 18px;
   line-height: 24px;
 }
 
-.form-send .send input[type="email"] {
+.send input[type="email"] {
   width: 338px;
   padding: 15px;
 } 
 
 .map {
   width: 1200px;
-  height: 432px;
-  background-image: url("/GitHub/777913-gllacy/img/map.jpg");
+  min-height: 432px;
+  background-image: url("../img/map.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;  
 }
 
-.map .map-content {
+.map-content {
   padding: 20px;
   width: 262px;
-  height: 263px;
+  min-height: 263px;
   background-color: #fffffe;
   border-radius: 15px;
 }
 
-.map .map-content p {
+.map-content p {
   white-space: pre;
   text-align: left;
   padding-left: 0px;
   
   font-size: 14px;
-  line-height: 20x;
+  line-height: 20px;
   font-weight: normal;
   color: #323232;
 }
 
-.map .map-content p span {  /*как сделать соответствие макету?*/
-  white-space: pre;
-  text-align: left;
-  padding: 0px;
-}
+/*как сделать соответствие макету? нужно вынести span из p и тоже самое сделать со ссылкой, потом inline-block, white-space не нужен*/
 
-.map .map-content p a {
+.map-content p a {
   margin: 10px;
   text-align: center;
 }
 
-.map .map-content a {
+.map-content a {
   font-size: 18px;
-  line-height: 24x;
+  line-height: 24px;
   font-weight: bold;
   color: #323232;
   text-decoration: none;
 }
 
-.map .map-content .button {
+.map-content .button {
   font-size: 18px;
-  line-height: 24x;
+  line-height: 24px;
   color: #ffffff;
 }
 
-.map .map-content span {
+.map-content span {
   font-size: 18px;
-  line-height: 24x;
+  line-height: 24px;
   font-weight: bold;
   color: #323232; 
 }
@@ -396,27 +593,27 @@ input[type="password"] {
   color: #ffffff;
 } 
 
-.contacts-footer .contacts-link a {
+.contacts-link a {
   font-size: 13px;
-  line-height: 28x;
+  line-height: 28px;
   font-weight: normal;
   text-decoration: none;
   border-bottom: 1px solid #9db1a5;
 }
 
-.contacts-footer .icon-heart a {
+.icon-heart a {
   font-weight: bold;
 }
 
-.contacts-footer .icon-heart {
-  background-image: url("/GitHub/777913-gllacy/img/svg-gllacy/heart.svg");
+.icon-heart::before {
+  content: url("../img/svg-gllacy/heart.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
 
 .footer-copyright p {
   font-size: 12px;
-  line-height: 18x;
+  line-height: 18px;
   font-weight: normal;
   color: #ffffff;
 }
@@ -428,7 +625,7 @@ input[type="password"] {
 
 .feedback {
   width: 430px;
-  height: 400px;
+  min-height: 400px;
   background-color: #f8f7f4;
   border-radius: 10px;
   padding: 17px 24px 26px 24px;
@@ -436,16 +633,16 @@ input[type="password"] {
 
 .feedback span {
   font-size: 24px;
-  line-height: 28x;
+  line-height: 28px;
   font-weight: bold;
   color: #323232;
 }
 
-.feedback .form-feedback {
-  margin-top: 23px;
+.form-feedback {
+  margin-top: 22px;
 }
 
-.feedback .form-feedback 
+.form-feedback 
 input[type="text"],
 input[type="email"],
 textarea {
@@ -453,14 +650,60 @@ textarea {
   margin-bottom: 20px;
 }
 
-.feedback .form-feedback 
+.form-feedback 
 input[type="text"],
 input[type="email"] {
   width: 267px;
 }
 
-.feedback .form-feedback textarea {
+.form-feedback textarea {
   width: 400px;
   height: 155px;
   margin-bottom: 15px;
+}
+
+/*Стили внутренней страницы*/
+
+.inner-page {
+  min-width: 1200px;
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: #849d8f;
+}
+
+/*стили хедера вн.стр*/
+
+.site-navigation .catalog-button {
+  background: #d07058;
+  padding: 8px 15px;
+  box-shadow: none;
+}
+
+/*стили осн. части вн.стр.*/
+
+.catalog-list h3 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  border-bottom: 1px solid #9db1a5;
+}
+
+.catalog-list img {
+  border-radius: 50%;
+}
+
+.catalog-item-price  {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 500; 
+}
+
+.catalog-item-price span {
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: 500; 
+}
+
+.catalog-list a {
+  font-size: 18px;
+  line-height: 24px;
 }
