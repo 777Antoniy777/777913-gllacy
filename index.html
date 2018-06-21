@@ -10,57 +10,63 @@
     <body>
         <!--Шапка Глейси-->
         <header class="main-header">
-          <nav class="main-navigation">    
-            <!--Логотип-->
-            <a class="main-header-logo">
-            <img src="img/svg-gllacy/logo.svg" width="154" height="64" alt="Логотип Глейси">
-            </a>
-            <!--Меню навигации по сайту-->
+            <nav class="main-navigation">
+                <!--Логотип-->
+                <a class="main-header-logo">
+                <img src="img/svg-gllacy/logo.svg" width="154" height="64" alt="Логотип Глейси">
+                </a>
+                <!--Меню навигации по сайту-->
                 <div class="header-navigation-wrapper">
                     <ul class="site-navigation">
-                        <li><a href="catalog.html">Каталог</a></li>
-                        <li><a href="delivery.html">Доставка и оплата</a></li>
-                        <li><a href="company.html">О Компании</a></li>
+                        <li class="site-navigation-element opened">
+                            <a class="site-navigation-link" href="catalog.html">Каталог</a>
+                            <!--Всплывающий блок каталога-->
+                            <ul class="site-menu">
+                                <li><a href="#">Новинки</a></li>
+                                <li><a href="catalog.html">Сливочное</a></li>
+                                <li><a href="#">Щербеты</a></li>
+                                <li><a href="#">Фруктовый лед</a></li>
+                                <li><a href="#">Мелорин</a></li>
+                            </ul>
+                        </li>
+                        <li class="site-navigation-element"><a class="site-navigation-link" href="delivery.html">Доставка и оплата</a></li>
+                        <li class="site-navigation-element"><a class="site-navigation-link" href="company.html">О Компании</a></li>
                     </ul>
-            <!--Меню пользователя-->       
+                    <!--Меню пользователя-->       
                     <ul class="user-navigation">
-                        <li class="icon-search"><p class="visually-hidden"><span>Поиск</span></p></li>
-                        <li class="icon-login"><span>Вход</span></li>
+                        <li class="icon-search opened">
+                            <span class="visually-hidden">Поиск</span>
+                            <!--Всплывающий блок поиска-->
+                            <div class="site-seacrh">
+                                <form method="get" action="https://echo.htmlacademy.ru">
+                                    <label for="search" class="visually-hidden">Поиск</label>
+                                    <input type="search" name="search" id="search" placeholder="Что ищем?">
+                                </form>
+                            </div>
+                        </li>
+                        <li class="icon-login opened">
+                            <span>Вход</span>
+                            <!--Всплывающий блок входа-->
+                            <div class="site-entry">
+                                <form class="field-entry" method="post" action="https://echo.htmlacademy.ru">
+                                    <label for="email-entry" class="visually-hidden">Электронная почта</label>   
+                                    <input type="email" name="email-entry" id="email-entry" placeholder="Электронная почта">
+                                    <label for="password-entry" class="visually-hidden">Пароль</label>
+                                    <input type="password" name="password-entry" id="password-entry" placeholder="Пароль">
+                                    <div>
+                                        <button type="submit" class="button">Войти</button>
+                                        <p>
+                                            <a href="#">Забыли пароль?</a>
+                                            <a href="#">Новая регистрация</a>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
                         <li class="icon-basket-empty"><span>Пусто</span></li>
                     </ul>
                 </div>
             </nav>
-            <!--Всплывающий блок каталога-->
-            <div class="site-menu">
-                <ul>
-                    <li><a href="#">Новинки</a></li>
-                    <li><a href="catalog.html">Сливочное</a></li>
-                    <li><a href="#">Щербеты</a></li>
-                    <li><a href="#">Фруктовый лед</a></li>
-                    <li><a href="#">Мелорин</a></li>
-                </ul>
-            </div>
-            <!--Всплывающий блок поиска-->
-            <div class="site-seacrh">
-                <form method="get" action="https://echo.htmlacademy.ru">
-                    <label for="search" class="visually-hidden">Поиск</label>
-                    <input type="search" name="search" id="search" placeholder="Что ищем?">
-                </form>
-            </div>
-            <!--Всплывающий блок входа-->
-            <div class="site-entry">
-                <form class="field-entry" method="post" action="https://echo.htmlacademy.ru">
-                    <label for="email-entry" class="visually-hidden">Электронная почта</label>   
-                    <input type="email" name="email-entry" id="email-entry" placeholder="Электронная почта">
-                    <label for="password-entry" class="visually-hidden">Пароль</label>
-                    <input type="password" name="password-entry" id="password-entry" placeholder="Пароль">
-                    <button type="submit" class="button">Войти</button>
-                    <p>
-                        <a href="#">Забыли пароль?</a>
-                        <a href="#">Новая регистрация</a>
-                    </p>
-                </form>
-            </div>
             <!--Контактная информация-->
             <p class="phone">
                 С 10 до 20, ежедневно<br>
@@ -190,22 +196,22 @@
             </section>
             <!--Новости-->
             <div class="columns">
-            <article class="news">
-                <h3>Новое в нашем блоге</h3>
-                <a href="https://topice2017.ru/index.php/blog/20-fruit-cherbet">10 способов сервировки фруктовых щербетов к столу</a>
-            </article>
-            <!--Форма отправки-->
-            <section class="form-send">
-               <div class="form-send-background">
-                <h3 class="visually-hidden">Форма подписки на рассылку</h3>
-                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                <form class="send" method="post" action="https://echo.htmlacademy.ru">
-                    <label for="email-send" class="visually-hidden">Электронная почта</label>
-                    <input type="email" name="email-send" id="email-send" placeholder="Электронная почта">
-                    <button type="submit" class="button">Отправить</button>
-                </form>
-                </div>
-            </section>
+                <article class="news">
+                    <h3>Новое в нашем блоге</h3>
+                    <a href="https://topice2017.ru/index.php/blog/20-fruit-cherbet">10 способов сервировки фруктовых щербетов к столу</a>
+                </article>
+                <!--Форма отправки-->
+                <section class="form-send">
+                    <div class="form-send-background">
+                        <h3 class="visually-hidden">Форма подписки на рассылку</h3>
+                        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                        <form class="send" method="post" action="https://echo.htmlacademy.ru">
+                            <label for="email-send" class="visually-hidden">Электронная почта</label>
+                            <input type="email" name="email-send" id="email-send" placeholder="Электронная почта">
+                            <button type="submit" class="button">Отправить</button>
+                        </form>
+                    </div>
+                </section>
             </div>
             <!--Карта js-->
             <section class="map">

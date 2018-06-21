@@ -1,3 +1,5 @@
+/*при наведении курсором на инпуты или допустим иконки у них увеличивается outline , а не border, оцентровка проводится посредством заключения блоков в div и записей маргинов и паддингов и базовой ширины.*/
+
 body,
 html {
   margin: 0;
@@ -66,7 +68,7 @@ input[type="password"] {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: -4px;   /*без отриц. маргина не получается выровнить телефоны и дальнейшую сетку*/
+  margin-bottom: -4px;   /*без отриц. маргина не получается выравнить телефоны и дальнейшую сетку*/
 }
 
 .main-header-logo {
@@ -80,7 +82,7 @@ input[type="password"] {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 .site-navigation {
@@ -88,33 +90,18 @@ input[type="password"] {
   flex-wrap: wrap;
   align-items: center;
   flex-basis: 450px;
-  margin-left: 23px;
+  margin-left: 10px;
 }
 
-.site-navigation li {
-  display: inline-block;
-  margin-right: 28px;
-  vertical-align: middle;
-}
-
-.site-navigation li:hover:nth-of-type(1) {
-  background-color: #f7f6f3;
-  width: 87px;
-  height: 17px;
-  padding: 9px 4px;
+.site-navigation-element {
+  margin-right: 1px;
+  padding: 7px 14px 7px 13px;
   border-radius: 20px;
-  margin-left: -18px;  /*тоже пришлось минус ставить, без него сдвигается*/
 }
 
-.site-navigation li:hover:nth-of-type(1) a:hover:first-of-type {
+.site-navigation-link {
   display: block;
-  border: none;
-  color: #323232;
-  text-align: center;
-  padding: 0px 14px;
-}
-
-.site-navigation a {
+  vertical-align: middle;
   text-decoration: none;
   border-bottom: 1px solid #9db1a5;
   font-size: 16px;
@@ -122,124 +109,33 @@ input[type="password"] {
   font-weight: bold;
 }
 
-.user-navigation {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-basis: 450px;
-  
-  margin-right: 27px;
+.site-navigation-element:hover {
+  background-color: #f7f6f3;
 }
 
-.user-navigation li {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  margin-left: 10px;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 500;
+.site-navigation-element:hover .site-navigation-link {
+  border-bottom: none;
+  color: #323232;
 }
 
-.icon-search {
+.opened:first-child  {
   position: relative;
-  max-width: 25px;
-  padding-left: 8px;
-  
-  background-color: #9eb3a8;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
 }
 
-.icon-search span {
-  padding-left: 0px;
-  padding-top: 0px;
-}
-
-.icon-search::before {
-  position: absolute;
-  content: "";
-  margin-top: 8px;
-  background-image: url("../img/svg-gllacy/loupe.svg");
-  background-repeat: no-repeat;
-  background-position:  0;
-  left: 8px;
-  top: -3px;
-  width: 22px;
-  height: 21px;
-}
-
-.icon-login {
-  position: relative;
-  max-width: 100px;
-  padding-left: 8px;
-  padding-top: 8px;
-  
-  background-color: #9eb3a8;
-  width: 85px;
-  height: 24px;
-  border-radius: 20px;
-}
-
-.icon-login span {
-  padding-left: 19px;
-}
-
-.icon-login::before {
-  position: absolute;
-  content: "";
-  margin-top: 8px;
-  background-image: url("../img/svg-gllacy/white-entrance.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  left: 16px;
-  top: -2px;
-  width: 21px;
-  height: 20px;
-  
-  background-color: black;
-}
-
-.icon-basket-empty {
-  position: relative;
-  max-width: 100px;
-  padding-left: 0px;
-  padding-top: 8px;
-  
-  background-color: #9eb3a8;
-  width: 98px;
-  height: 24px;
-  border-radius: 20px;
-}
-
-.icon-basket-empty span {
-  padding-left: 27px;
-}
-
-.icon-basket-empty::before {
-  position: absolute;
-  content: "";
-  margin-top: 7px;
-  background-image: url("../img/svg-gllacy/basket.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  left: 15px;
-  top: -1px;
-  width: 22px;
-  height: 21px;
+.opened:hover .site-menu {
+  display: block;
 }
 
 .site-menu {
+  display: none;
   position: absolute;
-  top: 68px;
-  left: 190px;
-  width: 142px;
+  top: 37px;
+  left: -7px;
+  width: 144px;
   min-height: 172px;
-  height: 172px;
   background-color: #f8f7f4;
   border-radius: 5px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 } 
 
 .site-menu li:hover:not(:first-child) { 
@@ -257,8 +153,8 @@ input[type="password"] {
 .site-menu li {
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 8px;
-  padding-top: 5px;
+  padding-bottom: 9px;
+  padding-top: 4px;
 }
 
 .site-menu li:nth-of-type(1) a {
@@ -268,7 +164,7 @@ input[type="password"] {
 .site-menu li:nth-of-type(1) {
   padding-left: 14px;
   padding-right: 14px;
-  padding-top: 12px;
+  padding-top: 9px;
   padding-bottom: 11px;
   border-bottom: 1px solid #323232;
   margin-right: 6px;
@@ -276,54 +172,203 @@ input[type="password"] {
 } 
 
 .site-menu li:nth-of-type(2) {
-  padding-top: 10px;
+  padding-top: 8px;
 } 
 
-.site-seacrh {
+.user-navigation {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-basis: 450px;
+  margin-right: 27px;
+}
+
+.user-navigation li {
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.icon-search {
+  position: relative;
+  max-width: 25px;
+  background-color: #9eb3a8;
+  border-radius: 50%;
+  padding: 16px 16px 16px 16px;
+}
+
+.icon-search span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-search::before {
   position: absolute;
-  right: 257px;
-  top: 62px;
-  width: 341px;
-  min-height: 84px;
-  border-radius: 5px;
+  content: "";
+  background-image: url("../img/svg-gllacy/loupe.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 7px;
+  top: 7px;
+  width: 22px;
+  height: 21px;
+}
+
+.icon-search:hover {
+  position: relative;
+  background-color: #f8f7f4; 
+}
+
+.icon-search:hover::before {
+  background-image: url("../img/svg-gllacy/loupe-active.svg");
+}
+
+.icon-login {
+  max-width: 100px;
+  background-color: #9eb3a8;
+  border-radius: 20px;
+  padding: 8px 17px 8px 17px;
+}
+
+.icon-login span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 27px;
+}
+
+.icon-login span::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/svg-gllacy/white-entrance.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: -1px;
+  top: -2px;
+  width: 21px;
+  height: 20px;
+}
+
+.icon-login:hover {
+  position: relative;
   background-color: #f8f7f4;
+  color: #323232;
+}
+
+.icon-login:hover span::before {
+  background-image: url("../img/svg-gllacy/entrance.svg");
+}
+
+.icon-basket-empty {
+  max-width: 100px;
+  background-color: #9eb3a8;
+  border-radius: 20px;
+  padding: 8px 16px 8px 17px;
+}
+
+.icon-basket-empty span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 27px;
+}
+
+.icon-basket-empty span::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/svg-gllacy/basket.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: -1px;
+  top: -2px;
+  width: 22px;
+  height: 21px;
+}
+
+.icon-basket-empty:hover {
+  position: relative;
+  background-color: #f8f7f4;
+  color: #323232;
+}
+
+.icon-basket-empty:hover span::before {
+  background-image: url("../img/svg-gllacy/basket-active.svg");
+}
+
+.opened:hover .site-seacrh {
+  display: block;
+}
+
+.site-seacrh {
+  display: none;
+  position: absolute;
+  right: 1px;
+  top: 35px;
+  width: 341px;
+  min-height: 86px;
+  border-radius: 6px;
+  background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .site-seacrh input[type="search"] {
-  width: 309px;
+  width: 310px;
   height: 44px;
   margin: 21px 16px;
   padding-left: 14px;
 }
 
+.opened:hover .site-entry {
+  display: block;
+}
+
 .site-entry {
+  display: none;
   position: absolute;
-  right: 147px;
-  top: 62px;
+  right: 0px;
+  top: 35px;
   width: 278px;
   min-height: 214px;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .site-entry 
 input[type="email"],
 input[type="password"] {
-  width: 240px;
+  width: 242px;
   height: 44px;
-  margin: 20px 20px 0px 20px;
+  margin: 20px 20px 0px 18px;
   padding-left: 14px;
 }
 
 .site-entry .button {
-  padding: 13px 25px;
-  margin: 20px;
+  position: absolute;
+  left: 17px;
+  top: 149px;
+  padding: 10px 26px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
-.site-entry p {        /*некорректное нажатие на кнопку из-за магинов ссылок, убрать white-space*/
-  white-space: pre;
-  text-align: left;
-  margin: -84px 0 0 60px;
+.site-entry p {        
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 0px 0px 139px;
+}
+
+.site-entry a:nth-of-type(1) {
+  margin-top: 0px;
+  margin-bottom: -3px;
 }
 
 .site-entry a {
@@ -384,7 +429,7 @@ input[type="password"] {
   min-height: 230px;
   background-image: url("../img/raspberries-background.jpg");
   background-position: -49px -94px;  
-  background-position: no-repeat;
+  background-repeat: no-repeat;
   border-radius: 15px;
   margin-left: 27px;
 }
@@ -394,7 +439,7 @@ input[type="password"] {
   min-height: 230px;
   background-image: url("../img/chocolate-background.jpg");
   background-position: -217px -104px;
-  background-position: no-repeat;
+  background-repeat: no-repeat;
   border-radius: 15px; 
   margin-right: 27px;
 }
@@ -527,6 +572,7 @@ input[type="password"] {
   min-height: 220px;
   background-color: #f8f7f4;
   background-image: url("../img/formsend-gradient.png");
+  background-position: -4px 8px;
   border-radius: 15px;
   margin-right: 27px;
   padding: 0px;
@@ -542,21 +588,33 @@ input[type="password"] {
   margin: 5px;
 }
 
-.form-send p {
+.form-send-background p {
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
   color: #5a5a5a;
+  margin: 0px;
+  padding-top: 30px;
+  padding-left: 23px;
+  padding-right: 10px;
 }
 
 .send button {
   font-size: 18px;
   line-height: 24px;
+  margin-left: 8px;
+  padding-right: 19px;
+  padding-left: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px; 
 }
 
 .send input[type="email"] {
-  width: 338px;
-  padding: 15px;
+  width: 368px;
+  height: 45px;
+  padding-left: 13px;
+  margin-left: 22px;
+  margin-top: 36px;
 } 
 
 .map {
