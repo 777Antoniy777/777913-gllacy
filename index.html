@@ -8,6 +8,11 @@
         <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
+       <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+       <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+       <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+       <div class="site-container">
+       <div class="site-wrapper">
         <!--Шапка Глейси-->
         <header class="main-header">
             <nav class="main-navigation">
@@ -73,33 +78,35 @@
                 <a href="tel:+78124502525">8 812 450-25-25</a>
             </p>
         </header>
+         </div>
         <!--Основное содержание-->
         <main class="container">
             <!--Карусель-->
+            <div class="site-wrapper">
+            <section class="sliders">
             <h1 class="visually-hidden">Магазин Глейси</h1>
+            
             <ul class="main-slider">
-                <li class="icecream-slider">
+                <li class="icecream-slider" id="slider1">
                     <h1>Крем-брюле и пломбир с малиновым джемом</h1>
-                    <img src="img/slider-1.png" width="1045" height="881" alt="2 вкусных рожка мороженого"> 
-                    <a href="#" class="button">Давайте оба!</a>           
+                    <a href="#" class="button">Давайте оба!</a>        
                 </li>
-                <li class="icecream-slide">
+                <li class="icecream-slider" id="slider2">
                     <h1>Шоколадный пломбир и лимонный сорбет</h1>
-                    <img src="img/slider-2.png" width="1065" height="859" alt="2 вкусных рожка мороженого">
                     <a href="#" class="button">Давайте оба!</a>
                 </li>
-                <li class="icecream-slide">
+                <li class="icecream-slider" id="slider3">
                     <h1>Пломбир с помадкой и клубничный щербет</h1>
-                    <img src="img/slider-3.png" width="1079" height="854" alt="2 вкусных рожка мороженого">
                     <a href="#" class="button">Давайте оба!</a>
                 </li>
             </ul>
             <!--3 кнопки для карусели-->
-            <div class="buttons-sliders">  
-                <button class="button-slider button-first-slider" type="button">Первый слайд</button>
-                <button class="button-slider button-second-slider" type="button">Второй слайд</button>
-                <button class="button-slider button-third-slider" type="button">Третий слайд</button>
+            <div class="button-slider">  
+                <label for="product-1">Первый слайд</label>
+                <label for="product-2">Второй слайд</label>         
+                <label for="product-3">Третий слайд</label>
             </div>
+            </section>
             <!--2 колонки-->
             <section class="columns">
                 <h2 class="visually-hidden">Акции</h2>
@@ -185,12 +192,12 @@
                         <p class="icon-icecream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
                     </li>
                     <li class="features-element">
-                        <p class="icon-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                        <p class="icon-cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
                     </li>
                     </div>
                     <div class="second-column-list">
                     <li class="features-element">
-                        <p class="icon-cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                        <p class="icon-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
                     </li>
                     <li class="features-element">
                         <p class="icon-thermometer">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
@@ -217,6 +224,7 @@
                     </div>
                 </section>
             </div>
+          </div>
             <!--Карта js-->
             <section class="map">
                 <h2 class="visually-hidden">Карта</h2>
@@ -230,6 +238,7 @@
                 </div>
             </section>
         </main>
+        <div class="site-wrapper">
         <!--Подвал Глейси-->
         <footer class="main-footer">
             <!--Иконки соцсетей-->
@@ -268,6 +277,8 @@
                 <p>Сделано в <a class="main-footer-link" href="https://htmlacademy.ru">HTML Academy</a> &#169 2017</p>
             </aside>
         </footer>
+         </div>
+         <div class="site-wrapper">
         <div class="feedback">
             <span>Мы обязательно вам ответим!</span>
             <form class="form-feedback" method="post" action="https://echo.htmlacademy.ru">
@@ -281,5 +292,7 @@
                 <button type="button" class="close">Закрыть<img src="img/svg-gllacy/cross-big.svg" alt="Закрыть"></button>       
             </form>
         </div>
+         </div>
+      </div>
     </body>
 </html>
