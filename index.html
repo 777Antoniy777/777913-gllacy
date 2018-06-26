@@ -11,10 +11,9 @@
         <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
         <input class="visually-hidden" type="radio" id="product-2" name="toggle">
         <input class="visually-hidden" type="radio" id="product-3" name="toggle">
-        <div class="site-container">
-            <div class="site-wrapper">
+        <div class="site-background">
                 <!--Шапка Глейси-->
-                <header class="main-header">
+                <header class="site-wrapper">
                     <nav class="main-navigation">
                         <!--Логотип-->
                         <a class="main-header-logo">
@@ -78,12 +77,12 @@
                         <a href="tel:+78124502525">8 812 450-25-25</a>
                     </p>
                 </header>
-            </div>
             <!--Основное содержание-->
             <main class="site-wrapper">
                 <h1 class="visually-hidden">Магазин мороженого</h1>
                 <!--Карусель-->
                 <section class="slider">
+                   <h2 class="visually-hidden">Слайдер</h2>
                     <ul class="main-slides">
                         <li class="icecream-slide" id="slide1">
                             <h3>Крем-брюле и пломбир с малиновым джемом</h3>
@@ -231,9 +230,9 @@
                     <a href="#" class="button">Форма обратной связи</a>
                 </div>
             </section>
-            <div class="site-wrapper">
+           
                 <!--Подвал Глейси-->
-                <footer class="main-footer">
+                <footer class="main-footer site-wrapper">
                     <!--Иконки соцсетей-->
                     <ul class="social-list">
                         <li class="social-button-tw"><a class="visually-hidden" href="twitter.com">Твиттер</a></li>
@@ -244,22 +243,18 @@
                     <!--Различные контакты-->
                     <div class="contacts-footer">
                         <ul class="contacts-footer-content">
-                            <div class="contacts-footer-columns">
                                 <li class="contacts-link icon-heart">
                                     <a href="#">Для поставщиков</a>
                                 </li>
                                 <li class="contacts-link">
                                     <a href="#">Наши документы</a>
                                 </li>
-                            </div>
-                            <div class="contacts-footer-columns">
                                 <li class="contacts-link">
                                     <a href="#">О производстве</a>
                                 </li>
                                 <li class="contacts-link">
                                     <a href="#">Экологические стандарты</a>
                                 </li>
-                            </div>
                         </ul>
                     </div>
                     <!--Логотип HTML Academy-->
@@ -269,8 +264,9 @@
                         </a>   
                         <p>Сделано в <a class="main-footer-link" href="https://htmlacademy.ru">HTML Academy</a> &#169 2017</p>
                     </aside>
+                    
                 </footer>
-            </div>
+            
             <div class="feedback">
                 <span>Мы обязательно вам ответим!</span>
                 <form class="form-feedback" method="post" action="https://echo.htmlacademy.ru">

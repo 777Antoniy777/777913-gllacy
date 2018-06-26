@@ -18,7 +18,7 @@ body {
   width: 1146px;
 }
 
-.site-container {
+.site-background {
   background-color: #849d8f;
   background-image: url("../img/slider-1.png");
   background-position: center 2px;
@@ -27,18 +27,18 @@ body {
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
-.site-container::before,
-.site-container::after {
+.site-background::before,
+.site-background::after {
   content: "";
 
   visibility: hidden;
 }
 
-.site-container::before {
+.site-background::before {
   background-image: url("../img/slider-2.png");
 }
 
-.site-container::after {
+.site-background::after {
   background-image: url("../img/slider-3.png");
 }
 
@@ -102,11 +102,6 @@ input[type="password"] {
 }
 
 /*стили хедера гл.стр.*/
-.main-header {
-  font-family: "Roboto";
-  color: #ffffff;
-}
-
 .main-navigation {
   display: flex;
   flex-direction: row;
@@ -145,7 +140,7 @@ input[type="password"] {
   display: block;
   vertical-align: middle;
   text-decoration: none;
-  border-bottom: 1px solid #9db1a5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
@@ -238,23 +233,11 @@ input[type="password"] {
 .icon-search {
   position: relative;
   max-width: 25px;
-  background-color: #9eb3a8;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
   border-radius: 50%;
   padding: 16px 16px 16px 16px;
 }
-
-/*   стили для подложки
-.Подложка {
-  background-color: rgb(255, 255, 255);
-  opacity: 0.2;
-  position: absolute;
-  left: 971px;
-  top: 23px;
-  width: 93px;
-  height: 32px;
-  z-index: 187;
-}
-*/
 
 .icon-search span {
   display: inline-block;
@@ -284,7 +267,8 @@ input[type="password"] {
 
 .icon-login {
   max-width: 100px;
-  background-color: #9eb3a8;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
   border-radius: 20px;
   padding: 8px 17px 8px 17px;
 }
@@ -320,7 +304,8 @@ input[type="password"] {
 
 .icon-basket-empty {
   max-width: 100px;
-  background-color: #9eb3a8;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
   border-radius: 20px;
   padding: 8px 17px 8px 16px;
 }
@@ -502,29 +487,29 @@ input[type="password"] {
   font-size: 0;
 }
 
-#product-1:checked ~ .site-container #slide1, 
-#product-2:checked ~ .site-container #slide2,
-#product-3:checked ~ .site-container #slide3 {
+#product-1:checked ~ .site-background #slide1, 
+#product-2:checked ~ .site-background #slide2,
+#product-3:checked ~ .site-background #slide3 {
   display: block;
 }
 
-#product-1:checked ~ .site-container label[for="product-1"]::before,
-#product-2:checked ~ .site-container label[for="product-2"]::before,
-#product-3:checked ~ .site-container label[for="product-3"]::before {
+#product-1:checked ~ .site-background label[for="product-1"]::before,
+#product-2:checked ~ .site-background label[for="product-2"]::before,
+#product-3:checked ~ .site-background label[for="product-3"]::before {
   background-color: #ffffff;
 }
 
-#product-1:checked ~ .site-container {
+#product-1:checked ~ .site-background {
   background-color: #849d8f;
   background-image: url("../img/slider-1.png");
 }
 
-#product-2:checked ~ .site-container {
+#product-2:checked ~ .site-background {
   background-color: #8996a6;
   background-image: url("../img/slider-2.png");
 }
 
-#product-3:checked ~ .site-container {
+#product-3:checked ~ .site-background {
   background-color: #9d8b84;
   background-image: url("../img/slider-3.png");
 }
@@ -533,13 +518,14 @@ input[type="password"] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 23px;
 }
 
 .columns .first-column {
   width: 560px;
   min-height: 230px;
   background-image: url("../img/raspberries-background.jpg");
-  background-position: -49px -94px;  
+  background-position: -50px -94px;  
   background-repeat: no-repeat;
   border-radius: 15px;
 }
@@ -548,7 +534,7 @@ input[type="password"] {
   width: 560px;
   min-height: 230px;
   background-image: url("../img/chocolate-background.jpg");
-  background-position: -217px -104px;
+  background-position: -218px -104px;
   background-repeat: no-repeat;
   border-radius: 15px; 
 }
@@ -557,16 +543,16 @@ input[type="password"] {
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
-  margin-top: 17px;
-  margin-left: 19.5px;
-  margin-bottom: 0px;
+  margin-top: 16px;
+  margin-left: 19px;
+  margin-bottom: 5px;
 }
 
 .columns p {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
-  margin-top: 14px;
+  margin-top: 15px;
   margin-left: 20px;
   margin-right: 25px;
   margin-bottom: 0;
@@ -581,8 +567,8 @@ input[type="password"] {
 .first-column a {
   padding-left: 22px;
   padding-right: 22px;
-  padding-bottom: 11px;
-  padding-top: 11px;
+  padding-bottom: 12px;
+  padding-top: 10px;
   margin-left: 375px;
   margin-right: 21px;
 }
@@ -590,7 +576,7 @@ input[type="password"] {
 .second-column a {
   padding-left: 21px;
   padding-right: 21px;
-  padding-bottom: 11px;
+  padding-bottom: 12px;
   padding-top: 10px;
   margin-left: 351px;
   margin-right: 21px;
@@ -599,16 +585,14 @@ input[type="password"] {
 .hits {
   display: flex;
   flex-direction: row;
-  padding-left: 14px;
-  padding-right: 14px;
-  margin: 0;
+  margin-bottom: 28px;
 }
 
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .catalog-item {
@@ -618,25 +602,13 @@ input[type="password"] {
   justify-content: flex-start;
   flex-basis: 267px;
   min-height: 350px;
-  padding-left: 13px;
-  padding-right: 13px;
 }
-
-/*
-.catalog-item:not(:nth-child(1)) {
-  padding-left: 13px;
-}
-
-.catalog-item:not(:nth-of-type(4)) {
-  padding-right: 13px;
-}
-*/
 
 .catalog-item::before {
   display: none;
   position: absolute;
   top: 10px;
-  left: 0px;
+  left: -14px;
   content: "";
   border-radius: 5px;
   background-color: rgb(248, 247, 244);
@@ -666,7 +638,7 @@ input[type="password"] {
 }
 
 .catalog-item-title span {
-  border-bottom: 1px solid #9db1a5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .catalog-list img {
@@ -744,6 +716,7 @@ input[type="password"] {
   background-image: url("../img/wafer.jpg");
   border-radius: 15px;
   color: #323232;
+  margin-bottom: 38px;
 }
 
 .features-list {  
@@ -751,7 +724,7 @@ input[type="password"] {
   flex-direction: row;
   justify-content: flex-start;
   align-content: flex-start;
-  flex-basis: 192px;
+  min-height: 192px;
   flex-wrap: wrap;
   padding: 0;
   margin-left: 0px;
@@ -762,7 +735,7 @@ input[type="password"] {
   position: relative; 
   align-content: space-between;
   flex-basis: 500px;
-  padding: 0 0px 0 47px;
+  padding: 0 0px 0 47.2px;
   margin: 0px 0px 22px 18px;
 }
 
@@ -774,7 +747,7 @@ input[type="password"] {
   line-height: 30px;
   font-weight: 500;
   letter-spacing: 0.185px;
-  padding: 17px 0px 21px 20px;
+  padding: 21px 0px 21px 20px;
   margin: 0;
 }
 
@@ -783,7 +756,7 @@ input[type="password"] {
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
-  margin: 0 7px 0 11px;
+  margin: 0 7px 0 12px;
   letter-spacing: 0.05px;
 }
 
@@ -842,7 +815,7 @@ input[type="password"] {
   background-repeat: no-repeat;
   background-position: -51px -86px;
   border-radius: 15px;
-  margin-left: 27px;
+  
 }
 
 .news h2 {
@@ -874,7 +847,6 @@ input[type="password"] {
   background-image: url("../img/formsend-gradient.png");
   background-position: -4px 8px;
   border-radius: 15px;
-  margin-right: 27px;
   padding: 0px;
 }
 
@@ -905,8 +877,9 @@ input[type="password"] {
   margin-left: 8px;
   padding-right: 19px;
   padding-left: 18px;
-  padding-top: 10px;
-  padding-bottom: 10px; 
+  padding-top: 9px;
+  padding-bottom: 11px; 
+  margin-bottom: 5px;
 }
 
 .send input[type="email"] {
@@ -920,11 +893,13 @@ input[type="password"] {
 .map {
   position: relative;
   width: 100%;
-  min-height: 432px;
+  min-height: 428px;
   background-image: url("../img/map.jpg");
   background-position: 50% 0;
   background-size: cover;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat; 
+  margin-top: 40px;
+  margin-bottom: 3px;
 }
 
 .map-content {
@@ -989,12 +964,7 @@ input[type="password"] {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: "Roboto";
-  color: #ffffff;
-/*
-  margin-left: 27px; 
-  margin-right: 27px;
-*/
+  padding-bottom: 24px;
 } 
 
 .social-list {
@@ -1066,47 +1036,46 @@ input[type="password"] {
 
 .contacts-footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-content: flex-start;
   flex-basis: 560px;
-  margin-top: 27px;
+  margin: 0;
+  margin-top: 20px;
   padding: 0;
 }
 
 .contacts-footer-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  flex-basis: 310px;
-  padding: 0;
-  margin-left: 8px;
-}
-
-.contacts-footer-columns {
+  text-align: left;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  min-height: 40px;
+  padding: 0 119px 0 100px;
+  margin: 0;
 }
 
-.contacts-footer-columns:nth-of-type(odd) {
-  margin: 0 62px 0 0px ;
-  padding: 0;
+.contacts-link {
+  min-width: 170px;
+  padding: 0 0px 0px 0px;
+  margin: 0;
+  margin-bottom: -6px;
 }
 
-.contacts-footer-columns:nth-child(even) {
-  margin: -6px 0px 0 0px ;
-  padding: 0px 6px 0 0px ;
-}
-
-.contacts-link a {
+.contacts-link  a {
   font-size: 13px;
   line-height: 28px;
   font-weight: normal;
   text-decoration: none;
-  border-bottom: 1px solid #9db1a5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0 0px 0 0px;
+  margin: 0;
+}
+
+.contacts-link:nth-child(odd) a {
+  margin: 0 0px 0 29px;
 }
 
 .icon-heart a {
@@ -1121,7 +1090,7 @@ input[type="password"] {
   position: absolute;
   content: "";
   top: 8px;
-  left: -22px;
+  left: 7px;
   background-image: url("../img/svg-gllacy/heart.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -1148,11 +1117,12 @@ input[type="password"] {
 
 .main-footer-link {
   text-decoration: none;
-  border-bottom: 1px solid #9db1a5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /*попап*/
 .feedback {
+  display: none;
   width: 430px;
   min-height: 400px;
   background-color: #f8f7f4;
