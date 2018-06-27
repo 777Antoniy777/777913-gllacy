@@ -339,27 +339,39 @@ input[type="password"] {
   background-image: url("../img/svg-gllacy/basket-active.svg");
 }
 
-.icon-search:hover .site-seacrh {
+.icon-search:hover .site-search-background {
   display: block;
 }
 
-.site-seacrh {
+.site-search-background {
   display: none;
   position: absolute;
   right: 1px;
-  top: 35px;
+  top: 32px;
+  background-color: transparent;
   width: 341px;
-  min-height: 86px;
+  height: 5px;
+}
+
+.site-seacrh {
+/*  display: none;*/
+  position: absolute;
+  right: 0px;
+  top: 4px;
+  width: 340px;
+  min-height: 84px;
   border-radius: 6px;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  z-index: 50;
 }
 
 .site-seacrh input[type="search"] {
   width: 310px;
   height: 44px;
-  margin: 21px 16px;
-  padding-left: 14px;
+  margin: 20px 16px;
+  padding-left: 12px;
+  z-index: 100;
 }
 
 .icon-login:hover .site-entry {
@@ -616,6 +628,7 @@ input[type="password"] {
   width: 294px;
   min-height: 405px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  z-index: 20;
 }
 
 .catalog-item:hover::before {
@@ -978,7 +991,25 @@ input[type="password"] {
   position: relative;
 }
 
-.social-button-tw::before {
+.social-list li a:hover::before, 
+.social-list li a:focus::before {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(255, 255, 255, 0.702);
+  border-radius: 50%;
+}
+
+/* как сделать внутреннюю тень на рамке при нажатии
+.social-list li a:active::before {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(255, 255, 255, 0.502);
+  box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 0.004);
+  border-radius: 50%;
+}
+*/
+
+.social-button-tw a::before {
   position: absolute;
   content: "";
   top: -5px;
@@ -992,7 +1023,7 @@ input[type="password"] {
   border: 3px solid rgba(255, 255, 255, 0.502);
 }
 
-.social-button-inst::before {
+.social-button-inst a::before {
   position: absolute;
   content: "";
   top: -5px;
@@ -1006,7 +1037,7 @@ input[type="password"] {
   border: 3px solid rgba(255, 255, 255, 0.502);
 }
 
-.social-button-fb::before {
+.social-button-fb a::before {
   position: absolute;
   content: "";
   top: -5px;
@@ -1020,7 +1051,7 @@ input[type="password"] {
   border: 3px solid rgba(255, 255, 255, 0.502);
 }
 
-.social-button-vk::before {
+.social-button-vk a::before {
   position: absolute;
   content: "";
   top: -5px;
@@ -1064,7 +1095,7 @@ input[type="password"] {
   margin-bottom: -6px;
 }
 
-.contacts-link  a {
+.contacts-link a {
   font-size: 13px;
   line-height: 28px;
   font-weight: normal;
