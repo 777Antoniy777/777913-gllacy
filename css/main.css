@@ -724,17 +724,20 @@ input[type="password"] {
   padding-bottom: 12px;
   padding-top: 10px;
   margin-left: 351px;
-  margin-right: 21px;
+  margin-right: 20px;
 }
 
 .hits {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 28px;
 }
 
@@ -1453,7 +1456,8 @@ input[type="email"] {
 .inner-page .link-current {
   background: #d07058;
   padding: 8px 15px;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border-radius: 20px;
   text-decoration: none;
   padding: 7px 14px;
@@ -1493,7 +1497,8 @@ input[type="email"] {
   min-height: 171px;
   background-color: #f8f7f4;
   border-radius: 5px;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   z-index: 50;
 } 
 
@@ -1598,7 +1603,8 @@ input[type="email"] {
   border-radius: 5px;
   background-color: #f8f7f4;
   color: #323232;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   z-index: 50;
 }
 
@@ -1713,10 +1719,19 @@ input[type="email"] {
   font-weight: bold;
   color: #323232;
   text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin-right: 14px;
   padding-bottom: 30px;
 }
@@ -1732,9 +1747,16 @@ input[type="email"] {
 /*стили осн. части вн.стр.*/
 
 .breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin-top: 20px;
 }
 
@@ -1789,9 +1811,15 @@ input[type="email"] {
 }
 
 .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   width: 880px;
   margin-left: 0;
   padding-left: 1px;
@@ -1799,21 +1827,37 @@ input[type="email"] {
 }
 
 .form-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 875px;
   margin-left: 0;
   padding-left: 0;
 }
 
 .sorting {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 200px;
-  justify-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-right: 7px;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -1882,9 +1926,16 @@ input[type="email"] {
 }
 
 .fat {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: flex-start;
+      -ms-flex-align: flex-start;
+          align-items: flex-start;
   border: none;
   width: 400px;
   margin-bottom: 0;
@@ -1898,10 +1949,20 @@ input[type="email"] {
   margin-left: 16px;
 }
 
+_:-ms-fullscreen, :root .fat legend {
+  margin-bottom: 5px;
+  margin-top: -5px;
+}
+
 .fat-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 40px;
   padding-right: 16px;
   width: 415px;
@@ -1948,10 +2009,19 @@ input[type="email"] {
 }
 
 .fillers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   border: none;
   width: 700px;
   margin-left: 0;
@@ -1966,10 +2036,20 @@ input[type="email"] {
   margin-left: 15px;
 }
 
+_:-ms-fullscreen, :root .fillers legend {
+  margin-bottom: 5px;
+  margin-top: -5px;
+}
+
 .fillers-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 46px;
   padding-right: 9px;
   width: 700px;
@@ -2045,19 +2125,31 @@ input[type="email"] {
 
 .button-apply:active {
   background-color: rgb(237, 237, 237);
-  box-shadow: inset 0px 2px 2px 0px rgba(105, 105, 105, 1);
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(105, 105, 105, 1);
+          box-shadow: inset 0px 2px 2px 0px rgba(105, 105, 105, 1);
   padding: 9px 29px;
   border: transparent;
 /*  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);  пришлось применить собственные стили теней, с фотошопа не подходят*/
 }
 
 .range {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 220px;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+_:-ms-fullscreen, :root .fillers legend {
+  margin-bottom: 5px;
+  margin-top: -5px;
 }
 
 .range-controls {
@@ -2131,24 +2223,45 @@ input[type="email"] {
 }
 
 .catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-bottom: 59px;
 }
 
 .inner-page .catalog-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .inner-page .catalog-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-basis: 267px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-preferred-size: 267px;
+      flex-basis: 267px;
   min-height: 350px;
 }
 
@@ -2163,7 +2276,8 @@ input[type="email"] {
   opacity: 0.2;
   width: 294px;
   min-height: 405px;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   z-index: 20;
 }
 
@@ -2183,7 +2297,9 @@ input[type="email"] {
   text-align: center;
   margin-bottom: 22px;
   margin-top: 9px;
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .inner-page .catalog-item-title span {
@@ -2236,26 +2352,47 @@ input[type="email"] {
   line-height: 24px;
   margin-top: -12px;   /*было раньше 10px с гл стр. пока не знаю что произошло*/
   padding: 7px 18px 11px 18px;
-  align-self: center;
-  order: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   z-index: 50;
-  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+          box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
 }
 
 .paginator {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   min-height: 55px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 2px;
 }
 
 .paginator-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-right: 15px;
   width: 180px;
 }
@@ -2319,7 +2456,9 @@ input[type="email"] {
   background-repeat: no-repeat;
   width: 8px;
   height: 12px;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 
