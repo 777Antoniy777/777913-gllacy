@@ -563,7 +563,7 @@ input[type="password"] {
 /*стили основной части гл.стр.*/
 
 /*сделал флекс на всякий*/
-.main {
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2147,11 +2147,6 @@ _:-ms-fullscreen, :root .fillers legend {
   padding-bottom: 0;
 }
 
-_:-ms-fullscreen, :root .fillers legend {
-  margin-bottom: 5px;
-  margin-top: -5px;
-}
-
 .range-controls {
   position: relative;
   height: 18px;
@@ -2160,6 +2155,10 @@ _:-ms-fullscreen, :root .fillers legend {
   padding: 16px 22px 1px 22px;
   background-color: rgba(248, 247, 244, 0.2);
 } 
+
+_:-ms-fullscreen, :root .range-controls {
+  margin-top: -3px;
+}
 
 .range-controls .scale {
   height: 3px;
