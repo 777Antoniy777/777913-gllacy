@@ -84,7 +84,7 @@
                 </p>
             </header>
             <!--Основное содержание-->
-            <main class="site-wrapper">
+            <main class="site-wrapper main">
                 <h1 class="visually-hidden">Магазин мороженого</h1>
                 <!--Карусель-->
                 <section class="slider">
@@ -92,7 +92,7 @@
                     <ul class="main-slides">
                         <li class="icecream-slide" id="slide1">
                             <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-                            <a href="#" class="button">Давайте оба!</a>        
+                            <a href="#" class="button">Давайте оба!</a>       
                         </li>
                         <li class="icecream-slide" id="slide2">
                             <h3>Шоколадный пломбир и лимонный сорбет</h3>
@@ -226,6 +226,7 @@
             </main>
             <!--Карта js-->
             <section class="map">
+               <div class="site-wrapper">
                 <h2 class="visually-hidden">Карта</h2>
                 <div class="map-content">
                     <p>Адрес главного офиса<br> и офлайн-магазина:</p>
@@ -234,6 +235,7 @@
                     <a href="tel:+78124502525">8 812 450-25-25</a>
                     <p>(с 10 до 20 ежедневно)</p>
                     <a href="#" class="button">Форма обратной связи</a>
+                </div>
                 </div>
             </section>
             <!--Подвал Глейси-->
@@ -271,7 +273,7 @@
                 </aside>
             </footer>
             <div class="feedback">
-                <span>Мы обязательно вам ответим!</span>
+                <span class="feedback-title">Мы обязательно вам ответим!</span>
                 <form class="form-feedback" method="post" action="https://echo.htmlacademy.ru">
                     <label for="name-feedback" class="visually-hidden">Ваше имя</label>
                     <input type="text" name="name-feedback" id="name-feedback" placeholder="Как вас зовут?">
@@ -279,8 +281,8 @@
                     <input type="email" name="email-feedback" id="email-feedback" placeholder="Ваша почта для ответа?">
                     <label for="comment-feedback" class="visually-hidden">Ваш комментарий</label>
                     <textarea name="comment-feedback" id="comment-feedback" placeholder="Напишите что-нибудь..."></textarea>
-                    <button type="submit" class="button">Отправить</button>
-                    <button type="button" class="close">Закрыть<img src="img/svg-gllacy/cross-big.svg" alt="Закрыть"></button>       
+                    <button type="submit" class="button">Отправить</button> 
+                    <button type="button" class="close"><span class="visually-hidden">Закрыть</span></button>
                 </form>
             </div>
         </div>

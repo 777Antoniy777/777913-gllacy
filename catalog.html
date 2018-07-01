@@ -8,15 +8,6 @@
         <link href="css/main.css" rel="stylesheet">
     </head>
     <body class="inner-page">
-       <input class="visually-hidden" type="radio" name="fat" id="zero-percent">
-       <input class="visually-hidden" type="radio" name="fat" id="to-ten-percent">
-       <input class="visually-hidden" type="radio" name="fat" id="to-thirty-percent">
-       <input class="visually-hidden" type="radio" name="fat" id="up-to-thirty-percent">
-       <input class="visually-hidden" type="checkbox" name="chocolate" id="chocolate">
-       <input class="visually-hidden" type="checkbox" name="sugar-powders" id="sugar-powders">
-       <input class="visually-hidden" type="checkbox" name="fruits" id="fruits">
-       <input class="visually-hidden" type="checkbox" name="syrups" id="syrups">
-       <input class="visually-hidden" type="checkbox" name="jams" id="jams">
         <!--Шапка каталога-->
         <header class="site-wrapper main-header">
            <nav class="main-navigation">
@@ -159,19 +150,28 @@
                     <fieldset class="fat">
                         <legend>Жирность:</legend>
                         <div class="fat-content">
+                        <input class="visually-hidden" type="radio" name="fat" id="zero-percent">
                         <label for="zero-percent">0%</label>  
+                        <input class="visually-hidden" type="radio" name="fat" id="to-ten-percent">
                         <label for="to-ten-percent">до 10%</label>
-                        <label for="to-thirty-percent">до 30%</label>          
+                        <input class="visually-hidden" type="radio" name="fat" id="to-thirty-percent">
+                        <label for="to-thirty-percent">до 30%</label>   
+                        <input class="visually-hidden" type="radio" name="fat" id="up-to-thirty-percent">    
                         <label for="up-to-thirty-percent">выше 30%</label>  
                         </div>
                     </fieldset>
                     <fieldset class="fillers">
                         <legend>Наполнители:</legend>
-                        <div class="fillers-content">                      
-                        <label for="chocolate">шоколадные</label>                     
-                        <label for="sugar-powders">сахарные присыпки</label>                      
-                        <label for="fruits">фрукты</label>                       
-                        <label for="syrups">сиропы</label>                
+                        <div class="fillers-content">
+                        <input class="visually-hidden" type="checkbox" name="chocolate" id="chocolate">                     
+                        <label for="chocolate">шоколадные</label>
+                        <input class="visually-hidden" type="checkbox" name="sugar-powders" id="sugar-powders">                  
+                        <label for="sugar-powders">сахарные присыпки</label> 
+                        <input class="visually-hidden" type="checkbox" name="fruits" id="fruits">                     
+                        <label for="fruits">фрукты</label>  
+                        <input class="visually-hidden" type="checkbox" name="syrups" id="syrups">                     
+                        <label for="syrups">сиропы</label> 
+                        <input class="visually-hidden" type="checkbox" name="jams" id="jams">               
                         <label for="jams">джемы</label>  
                         </div> 
                     </fieldset>
