@@ -149,10 +149,15 @@ input[type="password"] {
 
 .main-header-logo {
   display: inline-block;
+  vertical-align: top;
   margin-top: 11px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+_:-ms-fullscreen, :root .main-header-logo {
+  margin-left: 13px;
 }
 
 .header-navigation-wrapper {
@@ -240,6 +245,10 @@ input[type="password"] {
   background-color: #fbded8; 
 }
 
+.site-menu li:active:not(:first-child) { 
+  background-color: #f6b5a5; 
+}
+
 .site-menu a {
   color: #323232;
   text-decoration: none;
@@ -293,7 +302,7 @@ input[type="password"] {
   display: block;
   vertical-align: middle;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 9px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -535,6 +544,12 @@ input[type="password"] {
           text-decoration: underline #323232;
 }
 
+.site-entry a:hover,
+.site-entry a:active {
+  color: #e84d37;
+  text-decoration: underline #e84d37;
+}
+
 .phone {
   position: absolute;
   text-align: right;
@@ -623,6 +638,27 @@ input[type="password"] {
   left: 0;
   z-index: 20;
   font-size: 0;
+}
+
+.slider-controls label:hover::before {
+  background-color: rgba(248, 247, 244, 0.4);
+}
+
+.Подложка {
+  border-radius: 50%;
+  background-color: rgb(248, 247, 244);
+  opacity: 0.4;
+  position: absolute;
+  left: 916px;
+  top: 1508px;
+  width: 19px;
+  height: 19px;
+  z-index: 154;
+}
+
+
+_:-ms-fullscreen, :root .slider-controls {
+  margin-left: 13px;
 }
 
 #product-1:checked ~ .site-background #slide1, 
@@ -1037,6 +1073,11 @@ input[type="password"] {
   margin-right: 230px;
 }
 
+.news a:hover,
+.news a:active {
+  color: #e84d37;
+}
+
 .form-send {
   width: 560px;
   min-height: 220px;
@@ -1099,12 +1140,26 @@ input[type="password"] {
   margin-bottom: 3px;
 }
 
+.map .site-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .map-content {
   position: relative;
-  top: 63px;
+  top: 61px;
   left: 0px;
-  
-  margin-right: 0px;
   padding: 0px;
   width: 302px;
   min-height: 305px;
@@ -1119,7 +1174,7 @@ input[type="password"] {
   line-height: 20px;
   font-weight: normal;
   color: #323232;
-  margin: 29px 0px 1px 24px;
+  margin: 29px 0px 1px 25px;
 }
 
 .map-content span {
@@ -1128,11 +1183,11 @@ input[type="password"] {
   line-height: 24px;
   font-weight: bold;
   color: #323232;
-  margin: 0px 40px 0px 24px;
+  margin: 0px 40px 0px 25px;
 }
 
 .map-content p:nth-of-type(2) {
-  margin: 18px 80px 0px 24px;
+  margin: 18px 80px 0px 25px;
 }
 
 .map-content a {
@@ -1142,18 +1197,18 @@ input[type="password"] {
   font-weight: bold;
   color: #323232;
   text-decoration: none;
-  margin: 4px 0px 0px 24px;
+  margin: 4px 0px 0px 25px;
 }
 
 .map-content p:nth-of-type(3) {
-  margin: 2px 80px 0px 24px;
+  margin: 2px 80px 0px 25px;
 }
 
 .map-content .button {
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
-  margin: 23px 0px 0px 25px;
+  margin: 23px 0px 0px 26px;
   padding: 10px 27px 11px;
 }
 
@@ -1202,16 +1257,12 @@ input[type="password"] {
   border-radius: 50%;
 }
 
-/* как сделать внутреннюю тень на рамке при нажатии*/
-/*
 .social-list li a:active::before {
   width: 32px;
   height: 32px;
-  border: 3px solid rgba(255, 255, 255, 0.502);
-  box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 0.004);
+  box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 0.8);
   border-radius: 50%;
 }
-*/
 
 
 .social-button-tw a::before {
@@ -1317,6 +1368,12 @@ input[type="password"] {
   margin: 0;
 }
 
+.contacts-link a:hover,
+.contacts-link a:active {
+  color: #e84d37;
+  border-bottom: 1px solid #e84d37;
+}
+
 .contacts-link a {
   font-size: 13px;
   line-height: 22px;
@@ -1371,6 +1428,12 @@ input[type="password"] {
 .main-footer-link {
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-footer-link:hover,
+.main-footer-link:active {
+  color: #e84d37;
+  border-bottom: 1px solid #e84d37;
 }
 
 /*попап*/
@@ -1506,12 +1569,15 @@ input[type="email"] {
   background-color: #fbded8; 
 }
 
+.inner-page .site-menu li:active:not(:first-child):not(:nth-child(2)) { 
+  background-color: #f6b5a5; 
+}
+
 .inner-page .site-menu li:nth-child(2) { 
   background-color: #d07058;
 }
 
 .inner-page .site-menu li:nth-child(2) a { 
-  background-color: #d07058;
   color: #ffffff;
 }
 
@@ -1558,6 +1624,9 @@ input[type="email"] {
 
 .icon-basket-full .two-products {
   position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
   display: inline-block;
   vertical-align: middle;
   color: #323232;
@@ -1801,6 +1870,12 @@ input[type="email"] {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.breadcrumbs-element a:hover,
+.breadcrumbs-element a:active {
+  color: #e84d37;
+  border-bottom: 1px solid #e84d37;
+}
+
 .breadcrumbs h1 {
   font-size: 35px;
   line-height: 41px;
@@ -1893,6 +1968,10 @@ input[type="email"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 .sorting label::before {
@@ -2349,7 +2428,7 @@ _:-ms-fullscreen, :root .range-controls {
   display: none;
   font-size: 18px;
   line-height: 24px;
-  margin-top: -12px;   /*было раньше 10px с гл стр. пока не знаю что произошло*/
+  margin-top: -12px;   
   padding: 7px 18px 11px 18px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -2415,6 +2494,11 @@ _:-ms-fullscreen, :root .range-controls {
   font-size: 16px;
   line-height: 25px;
   font-weight: 500;
+}
+
+.paginator-item:not(:first-child):not(:last-child):not(:nth-child(2)):hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
 }
 
 .paginator-element-current {
