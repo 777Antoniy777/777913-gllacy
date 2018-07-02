@@ -205,6 +205,11 @@ _:-ms-fullscreen, :root .main-header-logo {
   background-color: #f7f6f3;
 }
 
+.site-navigation-element:active {
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.9);
+}
+
 .site-navigation-element:hover .site-navigation-link {
   border-bottom: none;
   color: #323232;
@@ -245,7 +250,7 @@ _:-ms-fullscreen, :root .main-header-logo {
   background-color: #fbded8; 
 }
 
-.site-menu li:active:not(:first-child) { 
+.site-menu .site-menu-element:active:not(:first-child) { 
   background-color: #f6b5a5; 
 }
 
@@ -257,18 +262,18 @@ _:-ms-fullscreen, :root .main-header-logo {
   font-weight: normal;
 }
 
-.site-menu li {
+.site-menu .site-menu-element {
   padding-left: 21px;
   padding-right: 20px;
   padding-bottom: 9px;
   padding-top: 4px;
 }
 
-.site-menu li:nth-of-type(1) a {
+.site-menu .site-menu-element:nth-of-type(1) a {
   font-weight: bold;
 }
 
-.site-menu li:nth-of-type(1) {
+.site-menu .site-menu-element:nth-of-type(1) {
   padding-left: 15px;
   padding-right: 14px;
   padding-top: 9px;
@@ -278,7 +283,7 @@ _:-ms-fullscreen, :root .main-header-logo {
   margin-left: 6px;
 } 
 
-.site-menu li:nth-of-type(2) {
+.site-menu .site-menu-element:nth-of-type(2) {
   padding-top: 8px;
 } 
 
@@ -451,6 +456,17 @@ _:-ms-fullscreen, :root .main-header-logo {
   margin: 20px 16px;
   padding-left: 12px;
   z-index: 100;
+  outline: none;
+}
+
+.site-seacrh input[type="search"]:hover {
+  box-shadow: inset 2px 2px 0 0px rgba(154, 154, 154, 0.52),
+  inset -2px -2px 0 0px rgba(154, 154, 154, 0.52);
+}
+
+.site-seacrh input[type="search"]:focus {
+  box-shadow: inset 2px 2px 0 0px rgba(46, 136, 228, 0.52),
+  inset -2px -2px 0 0px rgba(46, 136, 228, 0.52);
 }
 
 .icon-login:hover .site-entry-background {
@@ -480,14 +496,26 @@ _:-ms-fullscreen, :root .main-header-logo {
   z-index: 50;
 }
 
-.site-entry 
-input[type="email"],
+.site-entry input[type="email"],
 input[type="password"] {
   width: 241px;
   height: 44px;
   margin: 20px 20px 0px 19px;
   padding-left: 14px;
   z-index: 100;
+  outline: none;
+}
+
+.site-entry input[type="email"]:hover,
+input[type="password"]:hover {
+  box-shadow: inset 2px 2px 0 0px rgba(154, 154, 154, 0.52),
+  inset -2px -2px 0 0px rgba(154, 154, 154, 0.52);
+}
+
+.site-entry input[type="email"]:focus,
+input[type="password"]:focus {
+  box-shadow: inset 2px 2px 0 0px rgba(46, 136, 228, 0.52),
+  inset -2px -2px 0 0px rgba(46, 136, 228, 0.52);
 }
 
 .site-entry div {
@@ -617,6 +645,11 @@ input[type="password"] {
   margin-top: 29px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   border-radius: 50px;
+  outline: none;
+}
+
+.main-slides a:focus {
+  box-shadow: 2px 2px 0 0px rgba(46, 136, 228, 0.3), -2px -2px 0 0px rgba(46, 136, 228, 0.3), 2px -2px 0 0px rgba(46, 136, 228, 0.3), -2px 2px 0 0px rgba(46, 136, 228, 0.3);
 }
 
 .slider-controls label::before {
@@ -643,19 +676,6 @@ input[type="password"] {
 .slider-controls label:hover::before {
   background-color: rgba(248, 247, 244, 0.4);
 }
-
-.Подложка {
-  border-radius: 50%;
-  background-color: rgb(248, 247, 244);
-  opacity: 0.4;
-  position: absolute;
-  left: 916px;
-  top: 1508px;
-  width: 19px;
-  height: 19px;
-  z-index: 154;
-}
-
 
 _:-ms-fullscreen, :root .slider-controls {
   margin-left: 13px;
@@ -752,6 +772,7 @@ _:-ms-fullscreen, :root .slider-controls {
   padding-top: 10px;
   margin-left: 375px;
   margin-right: 21px;
+  outline: none;
 }
 
 .second-column a {
@@ -761,6 +782,12 @@ _:-ms-fullscreen, :root .slider-controls {
   padding-top: 10px;
   margin-left: 351px;
   margin-right: 20px;
+  outline: none;
+}
+
+.first-column a:focus,
+.second-column a:focus {
+  box-shadow: 2px 2px 0 0px rgba(46, 136, 228, 0.3), -2px -2px 0 0px rgba(46, 136, 228, 0.3), 2px -2px 0 0px rgba(46, 136, 228, 0.3), -2px 2px 0 0px rgba(46, 136, 228, 0.3);
 }
 
 .hits {
@@ -1118,6 +1145,11 @@ _:-ms-fullscreen, :root .slider-controls {
   padding-top: 9px;
   padding-bottom: 11px; 
   margin-bottom: 5px;
+  outline: none;
+}
+
+.send button:focus {
+  box-shadow: 2px 2px 0 0px rgba(46, 136, 228, 0.3), -2px -2px 0 0px rgba(46, 136, 228, 0.3), 2px -2px 0 0px rgba(46, 136, 228, 0.3), -2px 2px 0 0px rgba(46, 136, 228, 0.3);
 }
 
 .send input[type="email"] {
@@ -1126,7 +1158,18 @@ _:-ms-fullscreen, :root .slider-controls {
   padding-left: 13px;
   margin-left: 22px;
   margin-top: 36px;
+  outline: none;
 } 
+
+.send input[type="email"]:hover {
+  box-shadow: inset 2px 2px 0 0px rgba(154, 154, 154, 0.52),
+  inset -2px -2px 0 0px rgba(154, 154, 154, 0.52);
+}
+
+.send input[type="email"]:focus {
+  box-shadow: inset 2px 2px 0 0px rgba(46, 136, 228, 0.52),
+  inset -2px -2px 0 0px rgba(46, 136, 228, 0.52);
+}
 
 .map {
   position: relative;
@@ -1158,7 +1201,7 @@ _:-ms-fullscreen, :root .slider-controls {
 
 .map-content {
   position: relative;
-  top: 61px;
+  top: 62px;
   left: 0px;
   padding: 0px;
   width: 302px;
@@ -1210,6 +1253,11 @@ _:-ms-fullscreen, :root .slider-controls {
   color: #ffffff;
   margin: 23px 0px 0px 26px;
   padding: 10px 27px 11px;
+  outline: none;
+}
+
+.map-content .button:focus {
+  box-shadow: 2px 2px 0 0px rgba(46, 136, 228, 0.3), -2px -2px 0 0px rgba(46, 136, 228, 0.3), 2px -2px 0 0px rgba(46, 136, 228, 0.3), -2px 2px 0 0px rgba(46, 136, 228, 0.3);
 }
 
 /*стили футера гл.стр.*/
@@ -1249,21 +1297,26 @@ _:-ms-fullscreen, :root .slider-controls {
   position: relative;
 }
 
-.social-list li a:hover::before, 
-.social-list li a:focus::before {
+.social-list .social-link:hover::before {
   width: 32px;
   height: 32px;
   border: 3px solid rgba(255, 255, 255, 0.702);
   border-radius: 50%;
 }
 
-.social-list li a:active::before {
+.social-list .social-link:focus::before {
+  width: 32px;
+  height: 32px;
+  outline: none;
+  box-shadow: 2px 2px 0 0px rgba(46, 136, 228, 0.3), -2px -2px 0 0px rgba(46, 136, 228, 0.3), 2px -2px 0 0px rgba(46, 136, 228, 0.3), -2px 2px 0 0px rgba(46, 136, 228, 0.3);
+}
+
+.social-list .social-link:active::before {
+  opacity: 0.8;
   width: 32px;
   height: 32px;
   box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 0.8);
-  border-radius: 50%;
 }
-
 
 .social-button-tw a::before {
   position: absolute;
@@ -1437,6 +1490,17 @@ _:-ms-fullscreen, :root .slider-controls {
 }
 
 /*попап*/
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.302);  
+  z-index: 50;
+}
+
 .feedback {
   display: none;
   position: fixed;
@@ -1448,6 +1512,7 @@ _:-ms-fullscreen, :root .slider-controls {
   border-radius: 10px;
   padding: 17px 24px 26px 24px;
   margin-left: -238px;
+  z-index: 100;
 }
 
 .feedback .feedback-title {
@@ -1475,17 +1540,30 @@ _:-ms-fullscreen, :root .slider-controls {
   margin-top: 19px;
 }
 
-.form-feedback 
-input[type="text"],
+.form-feedback input[type="text"],
 input[type="email"],
 textarea {
   padding: 14px; 
   margin-bottom: 20px;
   border-radius: 5px;
+  outline: none;
 }
 
-.form-feedback 
-input[type="text"],
+.form-feedback input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  box-shadow: inset 2px 2px 0 0px rgba(154, 154, 154, 0.52),
+  inset -2px -2px 0 0px rgba(154, 154, 154, 0.52);
+}
+
+.form-feedback input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  box-shadow: inset 2px 2px 0 0px rgba(46, 136, 228, 0.52),
+  inset -2px -2px 0 0px rgba(46, 136, 228, 0.52);
+}
+
+.form-feedback input[type="text"],
 input[type="email"] {
   width: 267px;
   height: 44px;
@@ -1503,6 +1581,11 @@ input[type="email"] {
   line-height: 24px;
   margin-left: 291px;
   padding: 10px 24px;
+  outline: none;
+}
+
+.form-feedback .button:focus {
+  box-shadow: 2px 2px 0 0px rgba(46, 136, 228, 0.3), -2px -2px 0 0px rgba(46, 136, 228, 0.3), 2px -2px 0 0px rgba(46, 136, 228, 0.3), -2px 2px 0 0px rgba(46, 136, 228, 0.3);
 }
 
 /*Стили внутренней страницы*/
@@ -1510,7 +1593,13 @@ input[type="email"] {
 .inner-page {
   min-width: 1200px;
   font-family: "Roboto", "Arial", sans-serif;
+  background-image: url("../img/illumination.png");
+  background-size: 100% 647px;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
   background-color: #849d8f;
+  width: 100%;
+  height: 647px;
   color: #ffffff;
 }
 
@@ -1532,6 +1621,14 @@ input[type="email"] {
 
 .inner-page .element-current {
   margin-left: 0px;
+}
+
+.inner-page .link-current {
+  outline: none;
+}
+
+.inner-page .link-current:focus {
+  box-shadow: 2px 2px 0 0px rgba(46, 136, 228, 0.3), -2px -2px 0 0px rgba(46, 136, 228, 0.3), 2px -2px 0 0px rgba(46, 136, 228, 0.3), -2px 2px 0 0px rgba(46, 136, 228, 0.3);
 }
 
 .element-current  {
@@ -1565,19 +1662,23 @@ input[type="email"] {
   z-index: 50;
 } 
 
-.inner-page .site-menu li:hover:not(:first-child):not(:nth-child(2)) { 
+/*
+.inner-page .site-menu-element:hover:not(:first-child):not(:nth-child(2)) { 
   background-color: #fbded8; 
 }
+*/
 
-.inner-page .site-menu li:active:not(:first-child):not(:nth-child(2)) { 
+/*
+.inner-page .site-menu-element:active:not(:first-child):not(:nth-child(2)) { 
   background-color: #f6b5a5; 
 }
+*/
 
-.inner-page .site-menu li:nth-child(2) { 
+.inner-page .site-menu-element:nth-child(2) { 
   background-color: #d07058;
 }
 
-.inner-page .site-menu li:nth-child(2) a { 
+.inner-page .site-menu-element:nth-child(2) a { 
   color: #ffffff;
 }
 
@@ -1589,18 +1690,18 @@ input[type="email"] {
   font-weight: normal;
 }
 
-.inner-page .site-menu li {
+.inner-page .site-menu-element {
   padding-left: 21px;
   padding-right: 20px;
   padding-bottom: 9px;
   padding-top: 4px;
 }
 
-.inner-page .site-menu li:nth-of-type(1) a {
+.inner-page .site-menu-element:nth-of-type(1) a {
   font-weight: bold;
 }
 
-.inner-page .site-menu li:nth-of-type(1) {
+.inner-page .site-menu-element:nth-of-type(1) {
   padding-left: 15px;
   padding-right: 14px;
   padding-top: 9px;
@@ -1610,9 +1711,13 @@ input[type="email"] {
   margin-left: 6px;
 } 
 
-.inner-page .site-menu li:nth-of-type(2) {
+.inner-page .site-menu-element:nth-of-type(2) {
   padding-top: 8px;
 } 
+
+
+
+
 
 .icon-basket-full {
   max-width: 100px;
@@ -1736,10 +1841,6 @@ input[type="email"] {
   background-color: transparent;
   text-align: center;
   border: 0;
-}
-
-.button-remove span {
-  font-size: 0;
 }
 
 .basket-cell-image {
@@ -1964,6 +2065,7 @@ input[type="email"] {
   padding-right: 20px;
   margin-top: 6px;
   color: #ffffff;
+  outline: none;
   
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1972,6 +2074,10 @@ input[type="email"] {
 
 select::-ms-expand {
   display: none;
+}
+
+.sorting select:focus {
+  box-shadow: 2px 2px 0 0px rgba(46, 136, 228, 0.3), -2px -2px 0 0px rgba(46, 136, 228, 0.3), 2px -2px 0 0px rgba(46, 136, 228, 0.3), -2px 2px 0 0px rgba(46, 136, 228, 0.3);
 }
 
 .sorting label::before {
@@ -2062,6 +2168,7 @@ _:-ms-fullscreen, :root .fat legend {
   content: "";
   position: absolute;
   background-image: url("../img/svg-gllacy/radio-off.svg");
+  opacity: 0.8;
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 22px 22px;
@@ -2069,6 +2176,12 @@ _:-ms-fullscreen, :root .fat legend {
   left: -32px;
   width: 22px;
   height: 22px;
+  
+  cursor: pointer;
+}
+
+.fat-content label:hover::before {
+  opacity: 1;
 }
 
 .fat #zero-percent:checked + label[for="zero-percent"]::before,
@@ -2153,6 +2266,7 @@ _:-ms-fullscreen, :root .fillers legend {
   content: "";
   position: absolute;
   background-image: url("../img/svg-gllacy/checkbox-off.svg");
+  opacity: 0.8;
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 20px 20px;
@@ -2160,6 +2274,12 @@ _:-ms-fullscreen, :root .fillers legend {
   height: 20px;
   top: -1px;
   left: -32px;
+  
+  cursor: pointer;
+}
+
+.fillers-content label:hover::before {
+  opacity: 1;
 }
 
 .fillers #chocolate:checked + label[for="chocolate"]::before,
@@ -2193,8 +2313,13 @@ _:-ms-fullscreen, :root .fillers legend {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  outline: none;
   
   cursor: pointer;
+}
+
+.button-apply:focus {
+  box-shadow: 2px 2px 0 0px rgba(46, 136, 228, 0.3), -2px -2px 0 0px rgba(46, 136, 228, 0.3), 2px -2px 0 0px rgba(46, 136, 228, 0.3), -2px 2px 0 0px rgba(46, 136, 228, 0.3);
 }
 
 .button-apply:hover {
@@ -2208,7 +2333,6 @@ _:-ms-fullscreen, :root .fillers legend {
           box-shadow: inset 0px 2px 2px 0px rgba(105, 105, 105, 1);
   padding: 9px 29px;
   border: transparent;
-/*  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);  пришлось применить собственные стили теней, с фотошопа не подходят*/
 }
 
 .range {
@@ -2494,10 +2618,16 @@ _:-ms-fullscreen, :root .range-controls {
   font-size: 16px;
   line-height: 25px;
   font-weight: 500;
+  outline: none;
 }
 
 .paginator-item:not(:first-child):not(:last-child):not(:nth-child(2)):hover {
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.paginator-item a:focus {
+  box-shadow: 2px 2px 0 0px rgba(46, 136, 228, 0.3), -2px -2px 0 0px rgba(46, 136, 228, 0.3), 2px -2px 0 0px rgba(46, 136, 228, 0.3), -2px 2px 0 0px rgba(46, 136, 228, 0.3);
   border-radius: 50%;
 }
 
@@ -2512,11 +2642,6 @@ _:-ms-fullscreen, :root .range-controls {
   height: 25px;
 }
 
-.paginator-list .paginator-link-pre,
-.paginator-list .paginator-link-next {
-  font-size: 0;
-}
-
 .paginator-list .paginator-link-next::before {
   position: absolute;
   content: "";
@@ -2525,6 +2650,7 @@ _:-ms-fullscreen, :root .range-controls {
   background-image: url("../img/svg-gllacy/icon-right-small.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
+  opacity: 1;
   width: 8px;
   height: 12px;
 }
@@ -2537,6 +2663,7 @@ _:-ms-fullscreen, :root .range-controls {
   background-image: url("../img/svg-gllacy/icon-right-small.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
+  opacity: 0.3;
   width: 8px;
   height: 12px;
   -webkit-transform: rotate(180deg);
