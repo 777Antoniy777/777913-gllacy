@@ -250,7 +250,7 @@ _:-ms-fullscreen, :root .main-header-logo {
   background-color: #fbded8; 
 }
 
-.site-menu .site-menu-element:active:not(:first-child) { 
+.site-menu li:active:not(:first-child) { 
   background-color: #f6b5a5; 
 }
 
@@ -262,18 +262,18 @@ _:-ms-fullscreen, :root .main-header-logo {
   font-weight: normal;
 }
 
-.site-menu .site-menu-element {
+.site-menu li {
   padding-left: 21px;
   padding-right: 20px;
   padding-bottom: 9px;
   padding-top: 4px;
 }
 
-.site-menu .site-menu-element:nth-of-type(1) a {
+.site-menu li:nth-of-type(1) a {
   font-weight: bold;
 }
 
-.site-menu .site-menu-element:nth-of-type(1) {
+.site-menu li:nth-of-type(1) {
   padding-left: 15px;
   padding-right: 14px;
   padding-top: 9px;
@@ -283,7 +283,7 @@ _:-ms-fullscreen, :root .main-header-logo {
   margin-left: 6px;
 } 
 
-.site-menu .site-menu-element:nth-of-type(2) {
+.site-menu li:nth-of-type(2) {
   padding-top: 8px;
 } 
 
@@ -1662,23 +1662,19 @@ input[type="email"] {
   z-index: 50;
 } 
 
-/*
-.inner-page .site-menu-element:hover:not(:first-child):not(:nth-child(2)) { 
-  background-color: #fbded8; 
-}
-*/
-
-/*
-.inner-page .site-menu-element:active:not(:first-child):not(:nth-child(2)) { 
-  background-color: #f6b5a5; 
-}
-*/
-
-.inner-page .site-menu-element:nth-child(2) { 
+.inner-page .site-menu li:nth-child(2) { 
   background-color: #d07058;
 }
 
-.inner-page .site-menu-element:nth-child(2) a { 
+.inner-page .site-menu li:hover:not(:first-child):not(:nth-child(2)) { 
+  background-color: #fbded8; 
+}
+
+.inner-page .site-menu li:active:not(:first-child):not(:nth-child(2)) { 
+  background-color: #f6b5a5; 
+}
+
+.inner-page .site-menu li:nth-child(2) a { 
   color: #ffffff;
 }
 
@@ -1690,18 +1686,18 @@ input[type="email"] {
   font-weight: normal;
 }
 
-.inner-page .site-menu-element {
+.inner-page .site-menu li {
   padding-left: 21px;
   padding-right: 20px;
   padding-bottom: 9px;
   padding-top: 4px;
 }
 
-.inner-page .site-menu-element:nth-of-type(1) a {
+.inner-page .site-menu li:nth-of-type(1) a {
   font-weight: bold;
 }
 
-.inner-page .site-menu-element:nth-of-type(1) {
+.inner-page .site-menu li:nth-of-type(1) {
   padding-left: 15px;
   padding-right: 14px;
   padding-top: 9px;
@@ -1711,7 +1707,7 @@ input[type="email"] {
   margin-left: 6px;
 } 
 
-.inner-page .site-menu-element:nth-of-type(2) {
+.inner-page .site-menu li:nth-of-type(2) {
   padding-top: 8px;
 } 
 
