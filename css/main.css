@@ -1589,10 +1589,9 @@ iframe {
 }
 
 @keyframes shake {
-  0%  100%            {transform: translateY(0);     }
-  10% 30% 50% 70% 90% {transform: translateY(-50px); }
-  20% 40% 60% 80%     {transform: translateY(50px);  }
-  
+  0%,  100%               {transform: translateY(0);     }
+  10%, 30%, 50%, 70%, 90% {transform: translateY(-50px); }
+  20%, 40%, 60%, 80%      {transform: translateY(50px);  }
 }
 
 .feedback-error {
@@ -2295,10 +2294,7 @@ _:-ms-fullscreen, :root .fat legend {
   opacity: 0;
 }
 
-.zero-percent:checked + label[for="zero-percent"]::before,
-.to-ten-percent:checked + label[for="to-ten-percent"]::before,
-.to-thirty-percent:checked + label[for="to-thirty-percent"]::before,
-.up-to-thirty-percent:checked + label[for="up-to-thirty-percent"]::before {
+.fat-content input:checked + label::before {
   content: "";
   position: absolute;
   background-image: url("../img/svg-gllacy/radio-on.svg");
@@ -2311,6 +2307,12 @@ _:-ms-fullscreen, :root .fat legend {
   height: 22px;
 }
 
+.fat-content input:focus + label::before {
+  outline: none;
+  box-shadow: 0px 0px 0 2px rgba(46, 136, 228, 0.3);
+  border-radius: 50%;
+}
+
 .fat-content input[type="radio"]:disabled + label::before {
   opacity: 0.5;
 }
@@ -2318,15 +2320,6 @@ _:-ms-fullscreen, :root .fat legend {
 .fat-content input[type="radio"]:disabled + label {
   opacity: 0.5;
 }
-
-/*
-.zero-percent:checked:disabled + label[for="zero-percent"]::before,
-.to-ten-percent:checked:disabled + label[for="to-ten-percent"]::before,
-.to-thirty-percent:checked:disabled + label[for="to-thirty-percent"]::before,
-.up-to-thirty-percent:checked:disabled + label[for="up-to-thirty-percent"]::before {
-  opacity: 0.5;
-}
-*/
 
 .fillers {
   display: -webkit-box;
@@ -2385,13 +2378,9 @@ _:-ms-fullscreen, :root .fillers legend {
   margin-top: 9px;
 }
 
-/*это для того чтобы был focus, но пока ен выходит((*/
-/*
-.chocolate:checked:focus + label[for="chocolate"]:focus {
-  outline: 2px solid red;
-  background-color: red;
+.fillers-content input:focus + label::before {
+  outline: 2px solid rgba(46, 136, 228, 0.3);
 }
-*/
 
 .fillers-content label:not(:first-child) {
   margin-right: 9px;
@@ -2425,11 +2414,7 @@ _:-ms-fullscreen, :root .fillers legend {
   opacity: 0;
 }
 
-.chocolate:checked + label[for="chocolate"]::before,
-.sugar-powders:checked + label[for="sugar-powders"]::before,
-.fruits:checked + label[for="fruits"]::before,
-.syrups:checked + label[for="syrups"]::before,
-.jams:checked + label[for="jams"]::before {
+.fillers-content input:checked + label::before {
   content: "";
   position: absolute;
   background-image: url("../img/svg-gllacy/checkbox-on.svg");
@@ -2449,16 +2434,6 @@ _:-ms-fullscreen, :root .fillers legend {
 .fillers-content input[type="checkbox"]:disabled + label {
   opacity: 0.5;
 }
-
-/*
-.chocolate:checked:disabled + label[for="chocolate"]::before,
-.sugar-powders:checked:disabled + label[for="sugar-powders"]::before,
-.fruits:checked:disabled + label[for="fruits"]::before,
-.syrups:checked:disabled + label[for="syrups"]::before,
-.jams:checked:disabled + label[for="jams"]::before {
-  opacity: 0.5;
-}
-*/
 
 .button-apply {
   display: inline-block;
