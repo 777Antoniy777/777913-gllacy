@@ -874,10 +874,10 @@ _:-ms-fullscreen, :root .slider-controls {
 
 .hits-item::before {
   display: none;
+  content: "";
   position: absolute;
   top: 10px;
   left: -14px;
-  content: "";
   border-radius: 5px;
   background-color: rgb(248, 247, 244);
   opacity: 0.2;
@@ -902,7 +902,7 @@ _:-ms-fullscreen, :root .slider-controls {
   line-height: 22px;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: -200px;
   margin-top: 10px;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -928,7 +928,6 @@ _:-ms-fullscreen, :root .slider-controls {
   background-image: url("../img/svg-gllacy/hit.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  outline: red;
   top: 0;
   left: 0;
   width: 65px;
@@ -937,40 +936,34 @@ _:-ms-fullscreen, :root .slider-controls {
 
 .hits-item-image .hits-item-price  {
   position: absolute;
+  min-width: 280px;
   top: 209px;
   left: -1px;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
-}
-
-.hits-item-image .hits-item-price::after {
-  position: absolute;
-  content: "";
-  background-image: url("../img/svg-gllacy/ruble.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  top: 6px;
-  left: 80px;
-  width: 28px;
-  height: 35px;
+  margin-right: 0px;
 }
 
 .hits-item-image .hits-item-weight {
-  position: absolute;
+  background-image: url("../img/svg-gllacy/ruble.svg");
+  background-repeat: no-repeat;
+  background-position: 5px 1px;
+  display: inline-block;
   width: 50px;
-  top: 5px;
-  left: 112px;
   font-size: 30px;
   line-height: 45px;
   font-weight: 500; 
+  padding-left: 37px;
+  margin-left: 0;
 }
 
 .hits-list a {
   display: none;
   font-size: 18px;
   line-height: 24px;
-  margin-top: 10px;
+  margin-top: 210px;
+  margin-bottom: -210px;
   padding: 7px 18px 11px 18px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -2642,26 +2635,18 @@ _:-ms-fullscreen, :root .range-controls {
   font-weight: 500;
 }
 
-.inner-page .catalog-item-image .catalog-item-price::after {
-  position: absolute;
-  content: "";
+.inner-page .catalog-item-image .catalog-item-weight {
   background-image: url("../img/svg-gllacy/ruble.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
-  top: 5px;
-  left: 80px;
-  width: 28px;
-  height: 35px;
-}
-
-.inner-page .catalog-item-image .catalog-item-weight {
-  position: absolute;
+  background-position: 5px 1px;
+  display: inline-block;
+  vertical-align: middle;
   width: 50px;
-  top: 5px;
-  left: 112px;
   font-size: 30px;
   line-height: 45px;
   font-weight: 500; 
+  padding-left: 37px;
+  margin-left: 0;
 }
 
 .inner-page .catalog-list a {
