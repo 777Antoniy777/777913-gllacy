@@ -7,12 +7,20 @@ html {
 body {
   font-family: "Roboto", "Arial", sans-serif;
   color: #ffffff;
+  background-color: #849d8f;
+  width: 100%;
 }
 
 .site-wrapper {
   margin: 0 auto;
-  padding: 0px 27px;
-  width: 1146px;
+/*  padding: 0px 27px;*/
+/*  padding: 0px 2.2%;*/
+/*  max-width: 1146px;*/
+/*  min-width: 846px;*/
+  
+  /*Стили для резины*/
+  max-width: 1200px;
+  min-width: 900px;
 }
 
 .site-background {
@@ -26,6 +34,10 @@ body {
   -o-transition: background-image 0.5s ease, background-color 0.5s ease;
   
   transition: background-image 0.5s ease, background-color 0.5s ease;
+  
+  /*Стили для резины*/
+/*  margin: 0 auto;*/
+  min-width: 900px;
 }
 
 .site-background::before,
@@ -141,6 +153,10 @@ input[type="email"] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+/*  width: 97.4%;*/
+  
+  /*Стили для резины*/
+  width: 100%;
 }
 
 .main-navigation {
@@ -154,6 +170,11 @@ input[type="email"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  
+  /*Стили для резины*/
+  width: 95.5%;
+  margin-left: 2.2%;
+  margin-right: 2.2%;
 }
 
 .main-header-logo {
@@ -163,10 +184,6 @@ input[type="email"] {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-_:-ms-fullscreen, :root .main-header-logo {
-  margin-left: 13px;
 }
 
 .header-navigation-wrapper {
@@ -189,8 +206,7 @@ _:-ms-fullscreen, :root .main-header-logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 450px;
-      flex-basis: 450px;
+  width: 100%;
   margin-left: 10px;
 }
 
@@ -309,8 +325,7 @@ _:-ms-fullscreen, :root .main-header-logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 450px;
-      flex-basis: 450px;
+  width: 70%;
 }
 
 .user-navigation li {
@@ -318,6 +333,8 @@ _:-ms-fullscreen, :root .main-header-logo {
   vertical-align: middle;
   text-align: center;
   margin-left: 10px;
+  margin-bottom: 2px;
+  margin-top: 2px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -669,7 +686,7 @@ input[type="password"]:focus {
   text-align: right;
   width: 190px;
   top: 75px;
-  right: 27px;
+  right: 2.2%;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold; 
@@ -757,14 +774,11 @@ input[type="password"]:focus {
   left: 0;
   z-index: 20;
   font-size: 0;
+  margin-left: 2.2%;
 }
 
 .slider-controls label:hover::before {
   background-color: rgba(248, 247, 244, 0.4);
-}
-
-_:-ms-fullscreen, :root .slider-controls {
-  margin-left: 13px;
 }
 
 #product-1:checked ~ .site-background #slide1, 
@@ -809,32 +823,72 @@ _:-ms-fullscreen, :root .slider-controls {
 }
 
 .columns .first-column {
-  width: 560px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 560px;
+  min-width: 420px;
   min-height: 230px;
   background-color: #b13956;
   background-image: url("../img/raspberries-background.jpg");
   background-position: -50px -94px;  
   background-repeat: no-repeat;
   border-radius: 15px;
+  margin-right: 1.1%;
+  
+  /*Стили для резины*/
+  margin-left: 2.2%;
+}
+
+_:-ms-fullscreen, :root .columns p {
+  width: 94%;
 }
 
 .columns .second-column {
-  width: 560px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 560px;
+  min-width: 420px;
   min-height: 230px;
   background-color: #532d1c;
   background-image: url("../img/chocolate-background.jpg");
   background-position: -218px -104px;
   background-repeat: no-repeat;
   border-radius: 15px; 
+  margin-left: 1.1%;
+  
+  /*Стили для резины*/
+  margin-right: 2.2%;
 }
 
 .columns h2 {
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
-  margin-top: 16px;
-  margin-left: 19px;
-  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-bottom: 0px;
 }
 
 .columns p {
@@ -842,34 +896,38 @@ _:-ms-fullscreen, :root .slider-controls {
   line-height: 22px;
   font-weight: bold;
   margin-top: 15px;
-  margin-left: 20px;
+  margin-left: 19px;
   margin-right: 25px;
-  margin-bottom: 0;
 }
 
 .columns a {
   font-size: 18px;
   line-height: 24px;
-  margin-top: 44px;
 }
 
 .first-column a {
+  float: right;
   padding-left: 22px;
   padding-right: 22px;
   padding-bottom: 12px;
   padding-top: 10px;
-  margin-left: 375px;
-  margin-right: 21px;
+  margin-right: 23px;
+  margin-bottom: 24px;
+  margin-top: auto;
+  margin-left: auto;
   outline: none;
 }
 
 .second-column a {
+  float: right;
   padding-left: 21px;
   padding-right: 21px;
   padding-bottom: 12px;
   padding-top: 10px;
-  margin-left: 351px;
-  margin-right: 20px;
+  margin-right: 23px;
+  margin-bottom: 24px;
+  margin-top: auto;
+  margin-left: auto;
   outline: none;
 }
 
@@ -880,6 +938,8 @@ _:-ms-fullscreen, :root .slider-controls {
 }
 
 .catalog {
+  min-width: 860px;
+  max-width: 1146px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -891,6 +951,10 @@ _:-ms-fullscreen, :root .slider-controls {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 16px;
+  
+  /*Стили для резины*/
+  margin-left: 2.2%;
+  margin-right: 2.2%;
 }
 
 .catalog-list {
@@ -920,27 +984,25 @@ _:-ms-fullscreen, :root .slider-controls {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -ms-flex-preferred-size: 267px;
-      flex-basis: 267px;
+  width: 23.29%;
   margin-bottom: 12px;
-  min-height: 350px;
 }
 
 .catalog-item::before {
   display: none;
   content: "";
   position: absolute;
-  top: 10px;
-  left: -14px;
+  top: 2.8%;
+  left: -4.6%;
   border-radius: 5px;
-  background-color: rgb(248, 247, 244);
-  opacity: 0.2;
-  width: 294px;
+  background-color: rgba(255, 255, 255, 0.4);
+  opacity: 0.4;
+  width: 109.7%;
   height: 100%;
   padding-bottom: 55px;
   -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-  z-index: 20;
+  z-index: 100;
 }
 
 .catalog-item:hover::before {
@@ -952,8 +1014,7 @@ _:-ms-fullscreen, :root .slider-controls {
   line-height: 22px;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 0px;
-  margin-top: 10px;
+  margin: 10px 5.5px 8px 5.5px;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -967,9 +1028,16 @@ _:-ms-fullscreen, :root .slider-controls {
   border-radius: 50%;
 }
 
+/*В IE не уменьшается высота на резине*/
+_:-ms-fullscreen, :root .catalog-list img {
+  min-height: 200px;
+  width: 100%;
+}
+
 .catalog-item-image {
   position: relative;
   margin-bottom: 0px;
+  z-index: 50;
 }
 
 .hit::before {
@@ -987,8 +1055,8 @@ _:-ms-fullscreen, :root .slider-controls {
 .catalog-item-image .catalog-item-price  {
   position: absolute;
   min-width: 280px;
-  top: 209px;
-  left: -1px;
+  bottom: 13px;
+  left: -1%;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
@@ -1012,7 +1080,9 @@ _:-ms-fullscreen, :root .slider-controls {
 
 .catalog-item:hover .button  {
   display: block;
-  margin-bottom: -50px;
+  margin-top: auto;
+  margin-bottom: -45px;
+  z-index: 100;
 }
 
 .catalog-list .button {
@@ -1020,7 +1090,7 @@ _:-ms-fullscreen, :root .slider-controls {
   font-size: 18px;
   line-height: 24px;
   margin-top: 10px;
-  padding: 7px 18px 11px 18px;
+  padding: 8px 7% 13px 7%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1045,13 +1115,20 @@ _:-ms-fullscreen, :root .slider-controls {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 1146px;
+  min-width: 860px;
+  max-width: 1146px;
   min-height: 308px; 
   background-color: #ebe0c8;
   background-image: url("../img/wafer.jpg");
   border-radius: 15px;
   color: #323232;
-  margin-bottom: 37px;
+  margin-bottom: 38px;
+  padding-top: 0%;
+  margin-top: 0;
+  
+  /*Стили для резины*/
+  margin-left: 2.2%;
+  margin-right: 2.2%;
 }
 
 .features-list {  
@@ -1076,26 +1153,28 @@ _:-ms-fullscreen, :root .slider-controls {
 }
 
 .features-element {
-  position: relative; 
   -ms-flex-line-pack: justify; 
       align-content: space-between;
-  -ms-flex-preferred-size: 500px;
-      flex-basis: 500px;
-  padding: 0 0px 0 47.2px;
-  margin: 0px 0px 22px 18px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative; 
+  width: 50%;
+  padding: 0 0px 0px 47.2px;
+  margin: 0px 0px 24px 0px;
 }
 
 .features h2 {
-  width: 100%;
-  text-align: left;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  width: 90%;
+  text-align: left;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
   letter-spacing: 0.185px;
-  padding: 21px 0px 21px 20px;
-  margin: 0;
+  padding: 24px 0px 21px 20px;
+  margin: 0px;
 }
 
 .features-list p {
@@ -1103,8 +1182,12 @@ _:-ms-fullscreen, :root .slider-controls {
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
-  margin: 0 7px 0 12px;
+  margin: 0px 6px 0 28px;
   letter-spacing: 0.05px;
+}
+
+.features-element:nth-of-type(odd)  p:nth-child(odd) {
+  letter-spacing: -0.05px;
 }
 
 .icon-icecream::before {
@@ -1113,8 +1196,8 @@ _:-ms-fullscreen, :root .slider-controls {
   background-image: url("../img/svg-gllacy/ice-cream.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  top: -13px;
-  left: 2px;
+  top: -12px;
+  left: 20px;
   width: 50px;
   height: 50px;
 }
@@ -1125,8 +1208,8 @@ _:-ms-fullscreen, :root .slider-controls {
   background-image: url("../img/svg-gllacy/cow.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  top: -13px;
-  left: 2px;
+  top: -12px;
+  left: 18px;
   width: 50px;
   height: 50px;
 }
@@ -1137,8 +1220,8 @@ _:-ms-fullscreen, :root .slider-controls {
   background-image: url("../img/svg-gllacy/eco.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  top: -13px;
-  left: 2px;
+  top: -12px;
+  left: 20px;
   width: 50px;
   height: 50px;
 }
@@ -1149,20 +1232,25 @@ _:-ms-fullscreen, :root .slider-controls {
   background-image: url("../img/svg-gllacy/thermometer.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  top: -13px;
-  left: 2px;
+  top: -12px;
+  left: 18px;
   width: 50px;
   height: 50px;
 }
 
 .news {
-  width: 560px;
+  width: 100%;
+  min-width: 420px;
   min-height: 220px; 
   background-color: #ffffff;
   background-image: url("../img/strawberry-background.jpg");
   background-repeat: no-repeat;
   background-position: -51px -86px;
   border-radius: 15px;
+  margin-right: 1.1%;
+  
+  /*Стили для резины*/
+  margin-left: 2.2%;
 }
 
 .news h2 {
@@ -1178,13 +1266,15 @@ _:-ms-fullscreen, :root .slider-controls {
 
 .news a {
   display: inline-block;
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.8);
   color: black;
+  width: 335px;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
   margin-top: 4px;
   margin-left: 20px;
-  margin-right: 230px;
 }
 
 .news a:hover,
@@ -1195,17 +1285,32 @@ _:-ms-fullscreen, :root .slider-controls {
 }
 
 .form-send {
-  width: 560px;
+  width: 100%;
+  min-width: 420px;
   min-height: 220px;
   background-color: #f8f7f4;
   background-image: url("../img/formsend-gradient.png");
   background-position: -4px 8px;
   border-radius: 15px;
   padding: 0px;
+  margin-left: 1.1%;
+  
+  /*Стили для резины*/
+  margin-right: 2.2%;
 }
 
 .form-send-background {
-  width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 98.21%;
   min-height: 210px;
   background-color: #f8f7f4;
   background-repeat: no-repeat;
@@ -1221,19 +1326,20 @@ _:-ms-fullscreen, :root .slider-controls {
   color: #5a5a5a;
   margin: 0px;
   padding-top: 30px;
-  padding-left: 23px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  letter-spacing: 0.05px;
 }
 
 .send button {
   font-size: 18px;
   line-height: 24px;
-  margin-left: 8px;
-  padding-right: 19px;
+  margin-left: 12px;
+  margin-right: 22px;
+  padding-right: 20px;
   padding-left: 18px;
   padding-top: 9px;
   padding-bottom: 11px; 
-  margin-bottom: 5px;
   outline: none;
 }
 
@@ -1242,12 +1348,31 @@ _:-ms-fullscreen, :root .slider-controls {
           box-shadow: 0px 0px 0 2px rgba(46, 136, 228, 0.3);
 }
 
+.send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 33px;
+  margin-top: 10px;
+}
+
 .send input[type="email"] {
-  width: 368px;
+  width: 66.7%;
   height: 45px;
   padding-left: 13px;
-  margin-left: 22px;
-  margin-top: 36px;
+  margin: 0;
+  margin-left: 20px;
   outline: none;
 } 
 
@@ -1302,6 +1427,7 @@ _:-ms-fullscreen, :root .slider-controls {
   top: 0px;
   left: 0;
   width: 100%;
+  min-width: 900px;
   min-height: 428px;
   border: 0;
   background-image: url("../img/map.jpg");
@@ -1315,6 +1441,7 @@ _:-ms-fullscreen, :root .slider-controls {
 .google-map {
   margin-bottom: -5px;
   width: 100%;
+  min-width: 900px;
   min-height: 428px;
   border: 0;
 }
@@ -1333,6 +1460,10 @@ _:-ms-fullscreen, :root .slider-controls {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  
+  /*Стили для резины*/
+  min-width: 846px;
+  padding-right: 3.2%;
 }
 
 .map-content {
@@ -1343,6 +1474,9 @@ _:-ms-fullscreen, :root .slider-controls {
   min-height: 305px;
   background-color: #fffffe;
   border-radius: 15px;
+  
+  /*Стили для резины*/
+/*  margin-right: 2.2%;*/
 }
 
 _:-ms-fullscreen, :root .map-content {
@@ -1422,6 +1556,7 @@ _:-ms-fullscreen, :root .google-map {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 24px;
+  width: 100%;
 } 
 
 .social-list {
@@ -1432,13 +1567,16 @@ _:-ms-fullscreen, :root .google-map {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: flex-start;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 266px;
+  width: 250px;
   margin-top: 29px;
+  
+  /*Стили для резины*/
+  margin-left: 2.2%;
 }
 
 .social-list li  {
@@ -1507,9 +1645,8 @@ _:-ms-fullscreen, :root .google-map {
           justify-content: center;
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  -ms-flex-preferred-size: 560px;
-      flex-basis: 560px;
-  margin-left: 1px;
+  width: 418px;
+  margin-right: 0px;
   margin-top: 26px;
   padding: 0;
 }
@@ -1523,15 +1660,15 @@ _:-ms-fullscreen, :root .google-map {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
   -ms-flex-line-pack: center;
       align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   min-height: 40px;
-  padding: 0 119px 0 100px;
+  padding: 0 0px 0 0px;
   margin: 0;
 }
 
@@ -1582,14 +1719,16 @@ _:-ms-fullscreen, :root .google-map {
 }
 
 .footer-copyright {
-  text-align: center;
-  width: 267px;
-  margin: 16px 0 0 0px;
-  padding-left: 0px; 
+  text-align: left;
+  min-width: 190px;
+  margin-top: 16px;
+  
+  /*Стили для резины*/
+  margin-right: 2.2%;
 }
 
 .footer-copyright p {
-  text-align: right;
+  text-align: left;
   font-size: 12px;
   line-height: 18px;
   font-weight: normal;
@@ -1811,7 +1950,8 @@ input[type="email"] {
 .inner-page {
   font-family: "Roboto", "Arial", sans-serif;
   background-image: url("../img/illumination.png");
-  background-size: 100% 647px;
+/*  background-size: 100% 647px;*/
+  background-size: 103.7% 647px;
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-color: #849d8f;
@@ -2085,6 +2225,9 @@ _:-ms-fullscreen, :root .inner-page .main-header-logo {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-top: 20px;
+  
+  /*Стили для резины*/
+  margin-left: 2.2%;
 }
 
 .breadcrumbs-element {
@@ -2153,9 +2296,11 @@ _:-ms-fullscreen, :root .inner-page .main-header-logo {
           flex-direction: row;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-left: 0;
   padding-left: 1px;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
+  
+  /*Стили для резины*/
+  margin-left: 2.2%;
 }
 
 .form-filters {
@@ -2626,6 +2771,10 @@ _:-ms-fullscreen, :root .range-controls {
   letter-spacing: 0.5px;
 }
 
+.inner-page .catalog-item {
+  margin-bottom: 11px;
+}
+
 .paginator {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2643,7 +2792,11 @@ _:-ms-fullscreen, :root .range-controls {
   min-height: 55px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 2px;
-  margin-top: 43px;
+  margin-top: 46px;
+  
+  /*Стили для резины*/
+  margin-right: 2.4%;
+  margin-left: 2.2%;
 }
 
 .paginator-list {
