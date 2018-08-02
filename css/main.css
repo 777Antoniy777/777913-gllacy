@@ -13,10 +13,6 @@ body {
 
 .site-wrapper {
   margin: 0 auto;
-/*  padding: 0px 27px;*/
-/*  padding: 0px 2.2%;*/
-/*  max-width: 1146px;*/
-/*  min-width: 846px;*/
   
   /*Стили для резины*/
   max-width: 1200px;
@@ -36,7 +32,6 @@ body {
   transition: background-image 0.5s ease, background-color 0.5s ease;
   
   /*Стили для резины*/
-/*  margin: 0 auto;*/
   min-width: 900px;
 }
 
@@ -153,7 +148,6 @@ input[type="email"] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-/*  width: 97.4%;*/
   
   /*Стили для резины*/
   width: 100%;
@@ -781,6 +775,15 @@ input[type="password"]:focus {
   background-color: rgba(248, 247, 244, 0.4);
 }
 
+input[type="radio"]:nth-of-type(1):focus ~ .site-background label:nth-of-type(1)::before,
+input[type="radio"]:nth-of-type(2):focus ~ .site-background label:nth-of-type(2)::before,
+input[type="radio"]:nth-of-type(3):focus ~ .site-background label:nth-of-type(3)::before,
+input[type="radio"]:checked ~ .site-background label:active::before {
+  -webkit-box-shadow: 0px 0px 0 2px pink;
+          box-shadow: 0px 0px 0 2px pink;
+  border-radius: 50%;
+}
+
 #product-1:checked ~ .site-background #slide1, 
 #product-2:checked ~ .site-background #slide2,
 #product-3:checked ~ .site-background #slide3 {
@@ -947,9 +950,6 @@ _:-ms-fullscreen, :root .columns p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-bottom: 16px;
   
   /*Стили для резины*/
@@ -1030,7 +1030,7 @@ _:-ms-fullscreen, :root .columns p {
 
 /*В IE не уменьшается высота на резине*/
 _:-ms-fullscreen, :root .catalog-list img {
-  min-height: 200px;
+  height: 267px;
   width: 100%;
 }
 
@@ -1947,10 +1947,9 @@ input[type="email"] {
 .inner-page {
   font-family: "Roboto", "Arial", sans-serif;
   background-image: url("../img/illumination.png");
-/*  background-size: 100% 647px;*/
-  background-size: 103.7% 647px;
+  background-size: 100% 647px;
   background-position: 50% 0;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-color: #849d8f;
   width: 100%;
   height: 647px;
